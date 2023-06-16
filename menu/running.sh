@@ -54,9 +54,9 @@ CITY=$( curl -s ipinfo.io/city )
 #clear
 
 # CHEK STATUS
-#openvpn_service="$(systemctl show openvpn.service --no-page)"
-#oovpn=$(echo "${openvpn_service}" | grep 'ActiveState=' | cut -f2 -d=)
-#status_openvp=$(/etc/init.d/openvpn status | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
+openvpn_service="$(systemctl show openvpn.service --no-page)"
+oovpn=$(echo "${openvpn_service}" | grep 'ActiveState=' | cut -f2 -d=)
+status_openvp=$(/etc/init.d/openvpn status | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
 #status_ss_tls="$(systemctl show shadowsocks-libev-server@tls.service --no-page)"
 #ss_tls=$(echo "${status_ss_tls}" | grep 'ActiveState=' | cut -f2 -d=)
 #sst_status=$(systemctl status shadowsocks-libev-server@tls | grep Active | awk '{print $0}' | cut -d "(" -f2 | cut -d ")" -f1)
@@ -88,12 +88,12 @@ fail2ban_service=$(/etc/init.d/fail2ban status | grep Active | awk '{print $3}' 
 #sswg=$(systemctl status wg-quick@wg0 | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
 wstls=$(systemctl status ws-stunnel.service | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
 wsdrop=$(systemctl status ws-dropbear.service | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
-#wsovpn=$(systemctl status ws-ovpn | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
-#wsopen=$(systemctl status ws-openssh | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
-#osslh=$(systemctl status sslh | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
-#ohp=$(systemctl status dropbear-ohp | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
-#ohq=$(systemctl status openvpn-ohp | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
-#ohr=$(systemctl status ssh-ohp | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
+wsovpn=$(systemctl status ws-ovpn | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
+wsopen=$(systemctl status ws-openssh | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
+osslh=$(systemctl status sslh | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
+ohp=$(systemctl status dropbear-ohp | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
+ohq=$(systemctl status openvpn-ohp | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
+ohr=$(systemctl status ssh-ohp | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
 
 # COLOR VALIDATION
 RED='\033[0;31m'
@@ -208,6 +208,34 @@ else
    swsdrop="${RED}  Not Running ${NC}  ( Error )${NC}"
 fi
 
+# STATUS SERVICE SSLH / SSH
+if [[ $osslh == "running" ]]; then 
+   sosslh=" ${GREEN}Running ${NC}( No Error )${NC}"
+else
+   sosslh="${RED}  Not Running ${NC}  ( Error )${NC}"
+fi
+
+# STATUS OHP DROPBEAR
+if [[ $ohp == "running" ]]; then 
+   sohp=" ${GREEN}Running ${NC}( No Error )${NC}"
+else
+   sohp="${RED}  Not Running ${NC}  ( Error )${NC}"
+fi
+
+# STATUS OHP OpenVPN
+if [[ $ohq == "running" ]]; then 
+   sohq=" ${GREEN}Running ${NC}( No Error )${NC}"
+else
+   sohq="${RED}  Not Running ${NC}  ( Error )${NC}"
+fi
+
+# STATUS OHP SSH
+if [[ $ohr == "running" ]]; then 
+   sohr=" ${GREEN}Running ${NC}( No Error )${NC}"
+else
+   sohr="${RED}  Not Running ${NC}  ( Error )${NC}"
+fi
+
 # STATUS SHADOWSOCKS
 if [[ $shadowsocks == "running" ]]; then
    status_shadowsocks=" ${GREEN}Running ${NC}( No Error )${NC}"
@@ -247,8 +275,8 @@ kernelku=$(uname -r)
 
 # DNS PATCH
 #tipeos2=$(uname -m)
-Name=$(curl -sS https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/permission/ip | grep $MYIP | awk '{print $2}')
-Exp=$(curl -sS https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/permission/ip | grep $MYIP | awk '{print $3}')
+Name=$(curl -sS https://raw.githubusercontent.com/kuhing/ip/main/vps | grep $MYIP | awk '{print $2}')
+Exp=$(curl -sS https://raw.githubusercontent.com/kuhing/ip/main/vps | grep $MYIP | awk '{print $3}')
 # GETTING DOMAIN NAME
 Domen="$(cat /etc/xray/domain)"
 echo -e ""
@@ -270,7 +298,7 @@ echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━�
 echo -e "\E[44;1;39m            ⇱ SERVICE INFORMATION ⇲             \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "❇️ SSH / TUN               :$status_ssh"
-#echo -e "❇️ OpenVPN                 :$status_openvpn"
+echo -e "❇️ OpenVPN                 :$status_openvpn"
 echo -e "❇️ Dropbear                :$status_beruangjatuh"
 echo -e "❇️ Stunnel4                :$status_stunnel"
 #echo -e "❇️ Squid                   :$status_squid"
@@ -285,5 +313,9 @@ echo -e "❇️ XRAYS Trojan            :$status_virus_trojan"
 echo -e "❇️ Shadowsocks             :$status_shadowsocks"
 echo -e "❇️ Websocket TLS           :$swstls"
 echo -e "❇️ Websocket None TLS      :$swstls"
+echo -e "❇️ OHP Dropbear            :$sohp"
+echo -e "❇️ OHP OpenVPN             :$sohq"
+echo -e "❇️ OHP SSH                 :$sohr"
+#echo -e "❇️ SSL / SSH Multiplexer   :$sosslh"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo ""
