@@ -350,14 +350,14 @@ TEXT="
 <code>──────────────────────</code>
 <code>Remarks      : </code> <code>${user}</code>
 <code>Domain       : </code> <code>${domain}</code>
-<code>Wildcard      : </code> <code>(bug.com).${domain}</code>
-<code>Port TLS      : </code> <code>${tls}</code>
+<code>Wildcard     : </code> <code>(bug.com).${domain}</code>
+<code>Port TLS     : </code> <code>${tls}</code>
 <code>Port none TLS: </code> <code>${ntls}</code>
 <code>Port gRPC    : </code> <code>${tls}</code>
 <code>Password     : </code> <code>${uuid}</code>
-<code>Ciphers       : </code> <code>${cipher}</code>
+<code>Ciphers      : </code> <code>${cipher}</code>
 <code>Network      : </code> <code>ws/grpc</code>
-<code>Path          : </code> <code>/ss-ws</code>
+<code>Path         : </code> <code>/ss-ws</code>
 <code>ServiceName  : </code> <code>ss-grpc</code>
 <code>──────────────────────</code>
 <code>Link TLS     :</code> 
@@ -369,7 +369,7 @@ TEXT="
 <code>Link GRPC    :</code> 
 <code>${shadowsockslink2}</code>
 <code>──────────────────────</code>
-<code>Expired On : $exp</code>
+<code>Expired On   : $exp</code>
 <code>──────────────────────</code>
 "
 
@@ -460,14 +460,14 @@ TEXT="
 <code>──────────────────────</code>
 <code>Remarks      : </code> <code>${user}</code>
 <code>Domain       : </code> <code>${domain}</code>
-<code>Wildcard      : </code> <code>(bug.com).${domain}</code>
-<code>Port TLS      : </code> <code>${tls}</code>
+<code>Wildcard     : </code> <code>(bug.com).${domain}</code>
+<code>Port TLS     : </code> <code>${tls}</code>
 <code>Port none TLS: </code> <code>${ntls}</code>
 <code>Port gRPC    : </code> <code>${tls}</code>
 <code>Password     : </code> <code>${uuid}</code>
-<code>Ciphers       : </code> <code>${cipher}</code>
+<code>Ciphers      : </code> <code>${cipher}</code>
 <code>Network      : </code> <code>ws/grpc</code>
-<code>Path          : </code> <code>/ss-ws</code>
+<code>Path         : </code> <code>/ss-ws</code>
 <code>ServiceName  : </code> <code>ss-grpc</code>
 <code>──────────────────────</code>
 <code>Link TLS     :</code> 
@@ -479,7 +479,7 @@ TEXT="
 <code>Link GRPC    :</code> 
 <code>${shadowsockslink2}</code>
 <code>──────────────────────</code>
-<code>Expired On : $exp</code>
+<code>Expired On   : $exp</code>
 <code>──────────────────────</code>
 "
 
@@ -604,7 +604,7 @@ curl -s --max-time $TIMES -d "chat_id=$CHATID&disable_web_page_preview=1&text=$T
     echo ""
     read -n 1 -s -r -p "Press any key to back on m-ssws"
     m-ssws
-}
+    }
 function del-ssws(){
 clear
 NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/etc/xray/config.json")
@@ -700,10 +700,10 @@ TEXT="
 <b>  ⚠️ XRAY SHADOWSOCKS NOTIF ⚠️</b>
 <b>         User Login</b>
 <code>◇━━━━━━━━━━━━━━◇</code>
-<b>DOMAIN :</b> <code>${domain} </code>
-<b>ISP AND CITY :</b> <code>$ISP $CITY </code>
-<b>USERNAME :</b> <code>$akun </code>
-<b>TOTAL IP :</b> <code>${jum2} </code>
+<b>DOMAIN     :</b> <code>${domain} </code>
+<b>ISP & CITY :</b> <code>$ISP $CITY </code>
+<b>USERNAME   :</b> <code>$akun </code>
+<b>TOTAL IP   :</b> <code>${jum2} </code>
 <code>◇━━━━━━━━━━━━━━◇</code>
 "
 
@@ -775,14 +775,14 @@ TEXT="
 <code>──────────────────────</code>
 <code>Remarks      : </code> <code>${user}</code>
 <code>Domain       : </code> <code>${domain}</code>
-<code>Wildcard      : </code> <code>(bug.com).${domain}</code>
-<code>Port TLS      : </code> <code>${tls}</code>
+<code>Wildcard     : </code> <code>(bug.com).${domain}</code>
+<code>Port TLS     : </code> <code>${tls}</code>
 <code>Port none TLS: </code> <code>${ntls}</code>
 <code>Port gRPC    : </code> <code>${tls}</code>
 <code>Password     : </code> <code>${uuid}</code>
-<code>Ciphers       : </code> <code>${cipher}</code>
+<code>Ciphers      : </code> <code>${cipher}</code>
 <code>Network      : </code> <code>ws/grpc</code>
-<code>Path          : </code> <code>/ss-ws</code>
+<code>Path         : </code> <code>/ss-ws</code>
 <code>ServiceName  : </code> <code>ss-grpc</code>
 <code>──────────────────────</code>
 <code>Link TLS     :</code> 
@@ -794,7 +794,7 @@ TEXT="
 <code>Link GRPC    :</code> 
 <code>${shadowsockslink2}</code>
 <code>──────────────────────</code>
-<code>Expired On : $exp</code>
+<code>Expired On   : $exp</code>
 <code>──────────────────────</code>
 "
 
