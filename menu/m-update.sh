@@ -145,29 +145,29 @@ fun_bar() {
     tput cnorm
 }
 res1() {
-wget -O m-ip "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/m-ip.sh"    
-wget -O /usr/bin/menu "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/menu.sh" && chmod +x /usr/bin/menu
-wget -O /usr/bin/m-vmess "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/m-vmess.sh" && chmod +x /usr/bin/m-vmess
-wget -O /usr/bin/m-vless "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/m-vless.sh" && chmod +x /usr/bin/m-vless
-wget -O /usr/bin/m-trojan "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/m-trojan.sh" && chmod +x /usr/bin/m-trojan
-wget -O /usr/bin/m-system "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/m-system.sh" && chmod +x /usr/bin/m-system
-wget -O /usr/bin/m-sshovpn "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/m-sshovpn.sh" && chmod +x /usr/bin/m-sshovpn
-wget -O /usr/bin/m-ssws "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/m-ssws.sh" && chmod +x /usr/bin/m-ssws
-wget -O /usr/bin/running "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/running.sh" && chmod +x /usr/bin/running
-wget -O /usr/bin/m-backup "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/m-backup.sh" && chmod +x /usr/bin/m-backup
-wget -O /usr/bin/m-theme "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/m-theme.sh" && chmod +x /usr/bin/m-theme
-wget -O /usr/bin/m-ip "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/m-ip.sh" && chmod +x /usr/bin/m-ip
-wget -O /usr/bin/m-bot "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/m-bot.sh" && chmod +x /usr/bin/m-bot
-wget -O /usr/bin/m-update "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/m-update.sh" && chmod +x /usr/bin/update
-wget -O /usr/bin/ws-dropbear "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/sshws/ws-dropbear" && chmod +x /usr/bin/ws-dropbear
-wget -O /usr/bin/tendang "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/tendang.sh" && chmod +x /usr/bin/tendang
-wget -O /usr/bin/bottelegram "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/bottelegram.sh" && chmod +x /usr/bin/bottelegram
-wget -O /usr/bin/backup "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/backup2.sh" && chmod +x /usr/bin/backup
-wget -O /usr/bin/restore "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/restore.sh" && chmod +x /usr/bin/restore
-wget -O /usr/bin/cleaner "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/cleaner.sh" && chmod +x /usr/bin/cleaner
-wget -O /usr/bin/certv2ray "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/xray/certv2ray.sh" && chmod +x /usr/bin/certv2ray
-wget -O /usr/bin/add-host "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/addhost.sh" && chmod +x /usr/bin/add-host
-wget -O /usr/bin/bot "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/bot.sh" && chmod +x /usr/bin/bot
+#wget -O m-ip "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/menu/m-ip.sh"    
+wget -O /usr/bin/menu "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/menu/menu.sh" && chmod +x /usr/bin/menu
+wget -O /usr/bin/m-vmess "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/menu/m-vmess.sh" && chmod +x /usr/bin/m-vmess
+wget -O /usr/bin/m-vless "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/menu/m-vless.sh" && chmod +x /usr/bin/m-vless
+wget -O /usr/bin/m-trojan "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/menu/m-trojan.sh" && chmod +x /usr/bin/m-trojan
+wget -O /usr/bin/m-system "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/menu/m-system.sh" && chmod +x /usr/bin/m-system
+wget -O /usr/bin/m-sshovpn "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/menu/m-sshovpn.sh" && chmod +x /usr/bin/m-sshovpn
+wget -O /usr/bin/m-ssws "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/menu/m-ssws.sh" && chmod +x /usr/bin/m-ssws
+wget -O /usr/bin/running "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/menu/running.sh" && chmod +x /usr/bin/running
+wget -O /usr/bin/m-backup "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/menu/m-backup.sh" && chmod +x /usr/bin/m-backup
+wget -O /usr/bin/m-theme "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/menu/m-theme.sh" && chmod +x /usr/bin/m-theme
+#wget -O /usr/bin/m-ip "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/menu/m-ip.sh" && chmod +x /usr/bin/m-ip
+wget -O /usr/bin/m-bot "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/menu/m-bot.sh" && chmod +x /usr/bin/m-bot
+wget -O /usr/bin/m-update "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/menu/m-update.sh" && chmod +x /usr/bin/update
+#wget -O /usr/bin/ws-dropbear "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/sshws/ws-dropbear" && chmod +x /usr/bin/ws-dropbear
+#wget -O /usr/bin/tendang "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/ssh/tendang.sh" && chmod +x /usr/bin/tendang
+#wget -O /usr/bin/bottelegram "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/bottelegram.sh" && chmod +x /usr/bin/bottelegram
+#wget -O /usr/bin/backup "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/backup2.sh" && chmod +x /usr/bin/backup
+#wget -O /usr/bin/restore "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/restore.sh" && chmod +x /usr/bin/restore
+wget -O /usr/bin/cleaner "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/ssh/cleaner.sh" && chmod +x /usr/bin/cleaner
+wget -O /usr/bin/certv2ray "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/xray/certv2ray.sh" && chmod +x /usr/bin/certv2ray
+wget -O /usr/bin/add-host "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/ssh/addhost.sh" && chmod +x /usr/bin/add-host
+#wget -O /usr/bin/bot "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/ssh/bot.sh" && chmod +x /usr/bin/bot
 
 chmod +x menu
 chmod +x m-vmess
@@ -180,17 +180,17 @@ chmod +x running
 chmod +x m-update
 chmod +x m-backup
 chmod +x m-theme
-chmod +x m-ip
+#chmod +x m-ip
 chmod +x m-bot
 chmod +x update
-chmod +x tendang
-chmod +x bottelegram
-chmod +x backup2
-chmod +x restore
+#chmod +x tendang
+#chmod +x bottelegram
+#chmod +x backup2
+#chmod +x restore
 chmod +x cleaner
 chmod +x certv2ray
 chmod +x add-host
-chmod +x bot
+#chmod +x bot
 
 clear
 
