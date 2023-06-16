@@ -182,8 +182,8 @@ clear
 author=$(cat /etc/profil)
 echo ""
 echo ""
-#wget -q https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/api;chmod +x api;./api
-wget -q https://raw.githubusercontent.com/Tarap-Kuhing/tarong/main/tarong/api;chmod +x api;./api
+wget -q https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/api;chmod +x api;./api
+sleep 5
 clear
 yellow "Add Domain for vmess/vless/trojan dll"
 echo " "
@@ -209,12 +209,12 @@ echo "IP=$pp" > /var/lib/ipvps.conf
 echo ""
 elif [[ $host == "2" ]]; then
 #install kuhing
-wget https://raw.githubusercontent.com/Tarap-Kuhing/tarong/main/tarong/SSH/kuhing.sh && chmod +x kuhing.sh && ./kuhing.sh
+wget https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/ssh/kuhing.sh && chmod +x kuhing.sh && ./kuhing.sh
 rm -f /root/kuhing.sh
 clear
 else
 echo -e "Random Subdomain/Domain is used"
-wget https://raw.githubusercontent.com/Tarap-Kuhing/tarong/main/tarong/SSH/kuhing.sh && chmod +x kuhing.sh && ./kuhing.sh
+wget https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/ssh/kuhing.sh && chmod +x kuhing.sh && ./kuhing.sh
 rm -f /root/kuhing.sh
 clear
 fi
@@ -267,6 +267,7 @@ sleep 1
 clear
 wget https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/xray/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
 wget https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/sshws/insshws.sh && chmod +x insshws.sh && ./insshws.sh
+wget https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/sshws/ohp.sh && chmod +x ohp.sh && ./ohp.sh
 #wget https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/installsl.sh && chmod +x installsl.sh && ./installsl.sh
 clear
 cat> /root/.profile << END
@@ -316,10 +317,6 @@ domain=$(cat /etc/xray/domain)
 LocalVersion=$(cat /root/versi)
 IPVPS=$(curl -s ipinfo.io/ip )
 ISPVPS=$( curl -s ipinfo.io/org )
-TIMES="10"
-CHATID="847645599"
-KEY="5985854137:AAHSToaZOGkZfxZLbGwjOqmaRTpJEzHKxhs"
-URL="https://api.telegram.org/bot$KEY/sendMessage"
 ISP=$(cat /etc/xray/isp)
 CITY=$(cat /etc/xray/city)
 domain=$(cat /etc/xray/domain) 
@@ -386,6 +383,7 @@ echo "" | tee -a log-install.txt
 rm /root/setup.sh >/dev/null 2>&1
 rm /root/ins-xray.sh >/dev/null 2>&1
 rm /root/insshws.sh >/dev/null 2>&1
+rm /root/ohp.sh >/dev/null 2>&1
 secs_to_human "$(($(date +%s) - ${start}))" | tee -a log-install.txt
 echo -e ""
 echo " Install Script VPS By TARAP KUHING SELESAI......... "
