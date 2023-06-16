@@ -137,7 +137,15 @@ rm /etc/nginx/sites-available/default
 wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/ssh/nginx.conf"
 mkdir -p /home/vps/public_html
 /etc/init.d/nginx restart
+rm /etc/nginx/conf.d/vps.conf
+wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/ssh/vps.conf"
+/etc/init.d/nginx restart
 
+mkdir /etc/systemd/system/nginx.service.d
+printf "[Service]\nExecStartPost=/bin/sleep 0.1\n" > /etc/systemd/system/nginx.service.d/override.conf
+rm /etc/nginx/conf.d/default.conf
+systemctl daemon-reload
+service nginx restart
 # install badvpn
 cd
 wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/ssh/newudpgw"
