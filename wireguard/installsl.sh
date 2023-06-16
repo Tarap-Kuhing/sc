@@ -1,12 +1,12 @@
 #!/bin/sh
 ns_domain_cloudflare() {
-	DOMAIN=kuhing.my.id
+	DOMAIN=tarong.my.id
 	DOMAIN_PATH=$(cat /etc/xray/domain)
 	SUB=$(tr </dev/urandom -dc a-z0-9 | head -c7)
-	SUB_DOMAIN=${SUB}.kuhing.my.id
+	SUB_DOMAIN=${SUB}.tarong.my.id
 	NS_DOMAIN=ns.${SUB_DOMAIN}
 	CF_ID=merahjambo@gmail.com
-        CF_KEY=a87d8da1122addfbc0dbb71ba4219875808c0
+        CF_KEY=86431de017f7bf317c3960061da2f87c8effb
 	set -euo pipefail
 	IP=$(wget -qO- ipinfo.io/ip)
 	echo "Updating DNS NS for ${NS_DOMAIN}..."
@@ -47,15 +47,15 @@ ns_domain_cloudflare() {
 setup_dnstt() {
 	cd
 	mkdir -p /etc/slowdns
-	wget -O dnstt-server "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/slowdns/dnstt-server" >/dev/null 2>&1
+	wget -O dnstt-server "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/wireguard/dnstt-server" >/dev/null 2>&1
 	chmod +x dnstt-server >/dev/null 2>&1
-	wget -O dnstt-client "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/slowdns/dnstt-client" >/dev/null 2>&1
+	wget -O dnstt-client "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/wireguard/dnstt-client" >/dev/null 2>&1
 	chmod +x dnstt-client >/dev/null 2>&1
 	./dnstt-server -gen-key -privkey-file server.key -pubkey-file server.pub
 	chmod +x *
 	mv * /etc/slowdns
-	wget -O /etc/systemd/system/client.service "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/slowdns/client" >/dev/null 2>&1
-	wget -O /etc/systemd/system/server.service "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/slowdns/server" >/dev/null 2>&1
+	wget -O /etc/systemd/system/client.service "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/wireguard/client" >/dev/null 2>&1
+	wget -O /etc/systemd/system/server.service "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/wireguard/server" >/dev/null 2>&1
 	sed -i "s/xxxx/$NS_DOMAIN/g" /etc/systemd/system/client.service 
 	sed -i "s/xxxx/$NS_DOMAIN/g" /etc/systemd/system/server.service 
 }
