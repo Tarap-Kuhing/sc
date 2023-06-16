@@ -89,8 +89,6 @@ touch /etc/per/id
 touch /etc/per/token
 touch /etc/xray/city
 touch /etc/xray/isp
-touch /etc/slowdns/server.pub
-touch /etc/slowdns/server.key
 
 echo -e "[ ${tyblue}NOTES${NC} ] Before we go.. "
 sleep 0.5
