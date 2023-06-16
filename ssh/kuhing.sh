@@ -36,13 +36,11 @@ RESULT=$(curl -sLX PUT "https://api.cloudflare.com/client/v4/zones/${ZONE}/dns_r
      -H "X-Auth-Key: ${CF_KEY}" \
      -H "Content-Type: application/json" \
      --data '{"type":"A","name":"'${dns}'","content":"'${IP}'","ttl":120,"proxied":false}')
-#echo "$dns" > /root/scdomain
-echo $dns > /root/domain
-#echo "$dns" > /etc/xray/scdomain
+echo "$dns" > /root/domain
+echo "$dns" > /root/scdomain
 echo "$dns" > /etc/xray/domain
 echo "$dns" > /etc/v2ray/domain
-#echo $dns > /root/domain
+echo "$dns" > /etc/xray/scdomain
+echo "$dns" > /etc/v2ray/scdomain
 echo "IP=$dns" > /var/lib/ipvps.conf
-#echo "Host NS : $NS_DOMAIN"
-#echo $NS_dns > /root/nsdomain
 cd
