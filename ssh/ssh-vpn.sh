@@ -329,7 +329,7 @@ wget -O m-tcp "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/menu/tcp.s
 
 
 wget -O xp "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/ssh/xp.sh"
-#wget -O asu "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/asu.sh"
+wget -O theme "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/menu/m-theme.sh"
 
 chmod +x menu
 chmod +x m-vmess
@@ -372,7 +372,7 @@ chmod +x m-tcp
 #chmod +x port-ovpn
 #chmod +x port-tr
 chmod +x xp
-#chmod +x asu
+chmod +x m-theme
 cd
 
 
