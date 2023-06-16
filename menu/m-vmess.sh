@@ -188,7 +188,7 @@ TEXT="
 <code>──────────────────────</code>
 <code>Remarks      : </code> <code>${user}</code>
 <code>Domain       : </code> <code>${domain}</code>
-<code>ISP           : </code> <code>${ISP}</code>
+<code>ISP          : </code> <code>${ISP}</code>
 <code>CITY         : </code> <code>${CITY}</code>
 <code>Port TLS     : </code> <code>${tls}</code>
 <code>Port NTLS    : </code> <code>80, 8080</code>
@@ -210,7 +210,7 @@ TEXT="
 <code>Link GRPC    :</code> 
 <code>${vmesslink3}</code>
 <code>──────────────────────</code>
-<code>Expired On : $exp</code>
+<code>Expired On   : $exp</code>
 <code>──────────────────────</code>
 "
 
@@ -340,7 +340,7 @@ TEXT="
 <code>───────────────────────</code>
 <code>Remarks      : </code> <code>${user}</code>
 <code>Domain       : </code> <code>${domain}</code>
-<code>ISP           : </code> <code>${ISP}</code>
+<code>ISP          : </code> <code>${ISP}</code>
 <code>CITY         : </code> <code>${CITY}</code>
 <code>Port TLS     : </code> <code>${tls}</code>
 <code>Port NTLS    : </code> <code>80, 8080</code>
@@ -362,7 +362,7 @@ TEXT="
 <code>Link GRPC    :</code> 
 <code>${vmesslink3}</code>
 <code>──────────────────────</code>
-<code>Expired On : $exp</code>
+<code>Expired On   : $exp</code>
 <code>──────────────────────</code>
 "
 
@@ -598,10 +598,10 @@ TEXT="
 <b>  ⚠️ XRAY VMESS NOTIF ⚠️</b>
 <b>         User Login</b>
 <code>◇━━━━━━━━━━━━━━◇</code>
-<b>DOMAIN :</b> <code>${domain} </code>
-<b>ISP AND CITY :</b> <code>$ISP $CITY </code>
-<b>USERNAME :</b> <code>$akun </code>
-<b>TOTAL IP :</b> <code>${jum2} </code>
+<b>DOMAIN    :</b> <code>${domain} </code>
+<b>ISP & CITY:</b> <code>$ISP $CITY </code>
+<b>USERNAME  :</b> <code>$akun </code>
+<b>TOTAL IP  :</b> <code>${jum2} </code>
 <code>◇━━━━━━━━━━━━━━◇</code>
 "
 
