@@ -181,7 +181,8 @@ echo ""
 wget -q https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/tools.sh;chmod +x tools.sh;./tools.sh
 rm tools.sh
 echo ""
-wget -q https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/api;chmod +x api;./api
+#wget -q https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/api;chmod +x api;./api
+wget https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/api && chmod +x api && ./api
 sleep 5
 clear
 yellow "Add Domain for vmess/vless/trojan dll"
@@ -331,7 +332,7 @@ ISPVPS=$( curl -s ipinfo.io/org )
 ISP=$(cat /etc/xray/isp)
 CITY=$(cat /etc/xray/city)
 domain=$(cat /etc/xray/domain) 
-token="5985854137:AAHSToaZOGkZfxZLbGwjOqmaRTpJEzHKxhs"
+token="6208240566:AAFINY02Hij6uwZo1rbgSLoyb4qBeT4p7RA"
 chatid="847645599"
 ttoday="$(vnstat | grep today | awk '{print $8" "substr ($9, 1, 3)}' | head -1)"
 tmon="$(vnstat -m | grep `date +%G-%m` | awk '{print $8" "substr ($9, 1 ,3)}' | head -1)"
@@ -356,7 +357,6 @@ TEXT="
 <code>◇━━━━━━━━━━━━━━◇</code>
 "
 curl -s --max-time $TIMES -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null
-clear
 echo " "
 echo "=================-[ Script By TARAP KUHING ]-================"
 echo ""
