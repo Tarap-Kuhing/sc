@@ -274,6 +274,7 @@ sleep 1
 clear
 wget https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/sshws/insshws.sh && chmod +x insshws.sh && ./insshws.sh
 wget https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/sshws/ohp.sh && chmod +x ohp.sh && ./ohp.sh
+wget https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/ssh/vpn.sh && chmod +x vpn.sh && ./vpn.sh
 #Instal Xray
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "$green          Install SLOWDNS By TARAP KUHING             $NC"
