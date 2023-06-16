@@ -166,7 +166,7 @@ wget -O /usr/bin/m-update "https://raw.githubusercontent.com/Tarap-Kuhing/sc/mai
 #wget -O /usr/bin/restore "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/restore.sh" && chmod +x /usr/bin/restore
 wget -O /usr/bin/cleaner "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/ssh/cleaner.sh" && chmod +x /usr/bin/cleaner
 wget -O /usr/bin/certv2ray "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/xray/certv2ray.sh" && chmod +x /usr/bin/certv2ray
-wget -O /usr/bin/add-host "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/ssh/addhost.sh" && chmod +x /usr/bin/add-host
+wget -O /usr/bin/add-host "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/ssh/add-host.sh" && chmod +x /usr/bin/add-host
 wget -O /usr/bin/uuid "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/xray/uuid.sh" && chmod +x /usr/bin/uuid
 
 chmod +x menu
