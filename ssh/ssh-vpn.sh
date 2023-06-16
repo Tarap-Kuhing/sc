@@ -260,7 +260,7 @@ sed -i 's@DROPBEAR_BANNER=""@DROPBEAR_BANNER="/etc/issue.net"@g' /etc/default/dr
 wget -O /etc/issue.net "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/ssh/issue.net"
 
 #install bbr dan optimasi kernel
-#wget https://raw.githubusercontent.com/Tarap-Kuhing/scriptvps/main/ssh/bbr.sh && chmod +x bbr.sh && ./bbr.sh
+wget https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/ssh/bbr.sh && chmod +x bbr.sh && ./bbr.sh
 
 # blokir torrent
 iptables -A FORWARD -m string --string "get_peers" --algo bm -j DROP
@@ -329,7 +329,7 @@ wget -O m-tcp "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/menu/tcp.s
 
 
 wget -O xp "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/ssh/xp.sh"
-wget -O theme "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/menu/m-theme.sh"
+wget -O m-theme "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/menu/m-theme.sh"
 
 chmod +x menu
 chmod +x m-vmess
