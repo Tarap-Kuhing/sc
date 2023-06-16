@@ -182,7 +182,8 @@ clear
 author=$(cat /etc/profil)
 echo ""
 echo ""
-wget -q https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/api;chmod +x api;./api
+#wget -q https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/api;chmod +x api;./api
+wget -q https://raw.githubusercontent.com/Tarap-Kuhing/tarong/main/tarong/api;chmod +x api;./api
 clear
 yellow "Add Domain for vmess/vless/trojan dll"
 echo " "
