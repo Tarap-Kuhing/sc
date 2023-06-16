@@ -4,7 +4,7 @@ biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 #########################
 
 BURIQ () {
-    curl -sS https://raw.githubusercontent.com/Tarap-Kuhing/Profile/main/Profile/permission/ip > /root/tmp
+    curl -sS https://raw.githubusercontent.com/Tarap-Kuhing/ip/main/vps > /root/tmp
     data=( `cat /root/tmp | grep -E "^### " | awk '{print $2}'` )
     for user in "${data[@]}"
     do
@@ -20,9 +20,9 @@ BURIQ () {
     done
     rm -f  /root/tmp
 }
-# https://raw.githubusercontent.com/Tarap-Kuhing/Profile/main/Profile/permission/ip
+# https://raw.githubusercontent.com/Tarap-Kuhing/ip/main/vps
 MYIP=$(curl -sS ipv4.icanhazip.com)
-Name=$(curl -sS https://raw.githubusercontent.com/Tarap-Kuhing/Profile/main/Profile/permission/ip | grep $MYIP | awk '{print $2}')
+Name=$(curl -sS https://raw.githubusercontent.com/Tarap-Kuhing/ip/main/vps | grep $MYIP | awk '{print $2}')
 echo $Name > /usr/local/etc/.$Name.ini
 CekOne=$(cat /usr/local/etc/.$Name.ini)
 
@@ -39,7 +39,7 @@ fi
 
 PERMISSION () {
     MYIP=$(curl -sS ipv4.icanhazip.com)
-    IZIN=$(curl -sS https://raw.githubusercontent.com/Tarap-Kuhing/Profile/main/Profile/permission/ip | awk '{print $4}' | grep $MYIP)
+    IZIN=$(curl -sS https://raw.githubusercontent.com/Tarap-Kuhing/ip/main/vps | awk '{print $4}' | grep $MYIP)
     if [ "$MYIP" = "$IZIN" ]; then
     Bloman
     else
@@ -79,11 +79,19 @@ fi
 
 mkdir -p /etc/xray
 mkdir -p /etc/v2ray
+mkdir -p /etc/per
+mkdir -p /etc/dns
+mkdir -p /etc/slowdns
 touch /etc/xray/domain
 touch /etc/v2ray/domain
 touch /etc/xray/scdomain
 touch /etc/v2ray/scdomain
-
+touch /etc/per/id
+touch /etc/per/token
+touch /etc/xray/city
+touch /etc/xray/isp
+touch /etc/slowdns/server.pub
+touch /etc/slowdns/server.key
 
 echo -e "[ ${tyblue}NOTES${NC} ] Before we go.. "
 sleep 0.5
@@ -158,37 +166,81 @@ sleep 0.5
 exit 0
 fi
 sleep 0.5
-
+mkdir -p /etc/kuhing
+mkdir -p /etc/kuhing/theme
 mkdir -p /var/lib/ >/dev/null 2>&1
 echo "IP=" >> /var/lib/ipvps.conf
 
 echo ""
-#wget -q https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/tools.sh;chmod +x tools.sh;./tools.sh
-#rm tools.sh
+wget -q https://raw.githubusercontent.com/Tarap-Kuhing/tarong/main/tarong/Installsl.shi;chmod +x Installsl.sh;./Installsl.sh
 clear
-echo -e  "|\033[1;31m============================================\033[0m|"
-echo -e  "|\033[0;33m    TERIMA KASIH SUDAH MENGGUNAKAN SCRIPT   \033[0;33m|"
-echo -e  "|\033[0;33m         DARI SAYA BY TARAP KUHING          \033[0;33m|"
-echo -e  "|\033[0;33m            TAMBAHKAN DOMAIN KAMU           \033[0;33m|"
-echo -e  "|\033[0;33m          KALAU TIDAK PUNYA DOMAIN          \033[0;33m|"
-echo -e  "|\033[0;33m             CHAT SAYA DULU OK....          \033[0;33m|"
-echo -e  "|\033[0;33m              WA: 085754292950              \033[0;33m|"
-echo -e  "|\033[1;31m============================================\033[0m|"
+yellow "Add Domain for vmess/vless/trojan dll"
 echo " "
-read -rp "Masukan domain kamu Disini : " -e dns
-    if [ -z $dns ]; then
-        echo -e "
-        Nothing input for domain!
-        Then a random domain will be created"
-    else
-        echo "$dns" > /root/scdomain
-	echo "$dns" > /etc/xray/scdomain
-	echo "$dns" > /etc/xray/domain
-	echo "$dns" > /etc/v2ray/domain
-	echo $dns > /root/domain
-        echo "IP=$dns" > /var/lib/ipvps.conf
-    fi
-
+echo -e "\e[1;32m════════════════════════════════════════════════════════════\e[0m"
+echo ""
+echo -e "   .----------------------------------."
+echo -e "   |\e[1;32mPlease select a domain type below \e[0m|"
+echo -e "   '----------------------------------'"
+echo -e "     \e[1;32m1)\e[0m Masukan Subdomain"
+echo -e "     \e[1;32m2)\e[0m Random Subdomain"
+echo -e "   ------------------------------------"
+read -p "   Please select numbers 1-2 or Any Button(Random) : " host
+echo ""
+if [[ $host == "1" ]]; then
+read -rp "Input your domain : " -e pp
+echo "$pp" > /root/domain
+echo "$pp" > /root/scdomain
+echo "$pp" > /etc/xray/domain
+echo "$pp" > /etc/v2ray/domain
+echo "$pp" > /etc/xray/scdomain
+echo "$pp" > /etc/v2ray/scdomain
+echo "IP=$pp" > /var/lib/ipvps.conf
+echo ""
+elif [[ $host == "2" ]]; then
+#install kuhing
+wget https://raw.githubusercontent.com/Tarap-Kuhing/tarong/main/tarong/SSH/kubing.sh && chmod +x kuhing.sh && ./kuhing.sh
+rm -f /root/kuhing.sh
+clear
+else
+echo -e "Random Subdomain/Domain is used"
+wget https://raw.githubusercontent.com/Tarap-Kuhing/tarong/main/tarong/SSH/kuhing.sh && chmod +x kuhing.sh && ./kuhing.sh
+rm -f /root/kuhing.sh
+clear
+fi
+#THEME RED
+cat <<EOF>> /etc/kuhing/theme/red
+BG : \E[40;1;41m
+TEXT : \033[0;31m
+EOF
+#THEME BLUE
+cat <<EOF>> /etc/kuhing/theme/blue
+BG : \E[40;1;44m
+TEXT : \033[0;34m
+EOF
+#THEME GREEN
+cat <<EOF>> /etc/kuhing/theme/green
+BG : \E[40;1;42m
+TEXT : \033[0;32m
+EOF
+#THEME YELLOW
+cat <<EOF>> /etc/kuhing/theme/yellow
+BG : \E[40;1;43m
+TEXT : \033[0;33m
+EOF
+#THEME MAGENTA
+cat <<EOF>> /etc/kuhing/theme/magenta
+BG : \E[40;1;43m
+TEXT : \033[0;33m
+EOF
+#THEME CYAN
+cat <<EOF>> /etc/kuhing/theme/cyan
+BG : \E[40;1;46m
+TEXT : \033[0;36m
+EOF
+#THEME CONFIG
+cat <<EOF>> /etc/kuhing/theme/color.conf
+blue
+EOF
 #install ssh ovpn
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "$green      Install SSH Websocket By TARAP KUHING              $NC"
@@ -204,6 +256,7 @@ sleep 1
 clear
 wget https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/xray/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
 wget https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/sshws/insshws.sh && chmod +x insshws.sh && ./insshws.sh
+wget https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/installsl.sh && chmod +x installsl.sh && ./installsl.sh
 clear
 cat> /root/.profile << END
 # ~/.profile: executed by Bourne-compatible login shells.
@@ -241,6 +294,46 @@ else
 gg="AM"
 fi
 curl -sS ifconfig.me > /etc/myipvps
+curl -s ipinfo.io/city?token=75082b4831f909 >> /etc/xray/city
+curl -s ipinfo.io/org?token=75082b4831f909  | cut -d " " -f 2-10 >> /etc/xray/isp
+IP=$(echo $SSH_CLIENT | awk '{print $1}')
+TMPFILE='/tmp/ipinfo-$DATE_EXEC.txt'
+curl http://ipinfo.io/$IP -s -o $TMPFILE
+ORG=$(cat $TMPFILE | jq '.org' | sed 's/"//g')
+domain=$(cat /etc/xray/domain)
+LocalVersion=$(cat /root/versi)
+IPVPS=$(curl -s ipinfo.io/ip )
+ISPVPS=$( curl -s ipinfo.io/org )
+Exp=$(curl -sS https://raw.githubusercontent.com/kuhing/ip/main/vps | grep $MYIP | awk '{print $3}')
+TIMES="10"
+CHATID="847645599"
+KEY="5985854137:AAHSToaZOGkZfxZLbGwjOqmaRTpJEzHKxhs"
+URL="https://api.telegram.org/bot$KEY/sendMessage"
+ISP=$(cat /etc/xray/isp)
+CITY=$(cat /etc/xray/city)
+domain=$(cat /etc/xray/domain) 
+token="5985854137:AAHSToaZOGkZfxZLbGwjOqmaRTpJEzHKxhs"
+chatid="847645599"
+ttoday="$(vnstat | grep today | awk '{print $8" "substr ($9, 1, 3)}' | head -1)"
+tmon="$(vnstat -m | grep `date +%G-%m` | awk '{print $8" "substr ($9, 1 ,3)}' | head -1)"
+DATE_EXEC="$(date "+%d %b %Y %H:%M")"
+REGION=$(cat $TMPFILE | jq '.region' | sed 's/"//g')
+COUNTRY=$(cat $TMPFILE | jq '.country' | sed 's/"//g')
+Name=$(curl -sS https://raw.githubusercontent.com/Tarap-Kuhing/ip/main/vps | grep $MYIP | awk '{print $2}')
+MYIP=$(curl -sS ipv4.icanhazip.com)
+echo "$Name" > /etc/profil
+TEXT="
+<code>◇━━━━━━━━━━━━━━◇</code>
+<b>  ⚠️ AUTOSCRIPT INSTALLER ⚠️</b>
+<code>◇━━━━━━━━━━━━━━◇</code>
+<b>DOMAIN    :</b> <code>${domain}</code>
+<b>IP        :</b> <code>${MYIP}</code>
+<b>ISP & CITY:</b> <code>$ISP $CITY</code>
+<b>AUTHOR    :</b> <code>$Name</code>
+<b>EXP SCRIPT:</b> <code>$Exp</code>
+<code>◇━━━━━━━━━━━━━━◇</code>
+"
+curl -s --max-time $TIMES -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null
 echo " "
 echo "=================-[ Script By TARAP KUHING ]-================"
 echo ""
@@ -280,21 +373,6 @@ rm /root/ins-xray.sh >/dev/null 2>&1
 rm /root/insshws.sh >/dev/null 2>&1
 secs_to_human "$(($(date +%s) - ${start}))" | tee -a log-install.txt
 echo -e ""
-sleep 5
-echo "5"
-echo ""
-sleep 4
-echo "4"
-echo -e ""
-sleep 3
-echo "3"
-echo -e ""
-sleep 2
-echo "2"
-echo -e ""
-sleep 1
-echo "1"
-echo -e ""
 echo " Install Script VPS By TARAP KUHING SELESAI......... "
-sleep 1
+sleep 3
 reboot
