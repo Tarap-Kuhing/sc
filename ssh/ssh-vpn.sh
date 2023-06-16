@@ -19,11 +19,11 @@ ver=$VERSION_ID
 #detail nama perusahaan
 country=ID
 state=Indonesia
-locality=Jakarta
+locality=Kalimantan
 organization=none
 organizationalunit=none
 commonname=none
-email=none
+email=merahjambo@gmail.com
 
 # simple password minimal
 curl -sS https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/ssh/password | openssl aes-256-cbc -d -a -pass pass:scvps07gg -pbkdf2 > /etc/pam.d/common-password
@@ -289,16 +289,19 @@ wget -O running "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/menu/run
 wget -O clearcache "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/menu/clearcache.sh"
 wget -O m-ssws "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/menu/m-ssws.sh"
 wget -O m-trojan "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/menu/m-trojan.sh"
+wget -O m-update "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/menu/m-update.sh"
+wget -O m-bot "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/menu/m-bot.sh"
+
 
 # menu ssh ovpn
 wget -O m-sshovpn "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/menu/m-sshovpn.sh"
-wget -O usernew "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/ssh/usernew.sh"
-wget -O trial "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/ssh/trial.sh"
-wget -O renew "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/ssh/renew.sh"
-wget -O hapus "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/ssh/hapus.sh"
-wget -O cek "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/ssh/cek.sh"
-wget -O member "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/ssh/member.sh"
-wget -O delete "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/ssh/delete.sh"
+#wget -O usernew "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/ssh/usernew.sh"
+#wget -O trial "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/ssh/trial.sh"
+#wget -O renew "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/ssh/renew.sh"
+#wget -O hapus "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/ssh/hapus.sh"
+#wget -O cek "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/ssh/cek.sh"
+#wget -O member "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/ssh/member.sh"
+#wget -O delete "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/ssh/delete.sh"
 wget -O autokill "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/ssh/autokill.sh"
 wget -O ceklim "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/ssh/ceklim.sh"
 wget -O tendang "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/ssh/tendang.sh"
@@ -335,15 +338,17 @@ chmod +x running
 chmod +x clearcache
 chmod +x m-ssws
 chmod +x m-trojan
+chmod +x m-update
+chmod +x m-bot
 
 chmod +x m-sshovpn
-chmod +x usernew
-chmod +x trial
-chmod +x renew
-chmod +x hapus
-chmod +x cek
-chmod +x member
-chmod +x delete
+#chmod +x usernew
+#chmod +x trial
+#chmod +x renew
+#chmod +x hapus
+#chmod +x cek
+#chmod +x member
+#chmod +x delete
 chmod +x autokill
 chmod +x ceklim
 chmod +x tendang
