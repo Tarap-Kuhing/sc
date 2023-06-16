@@ -172,7 +172,7 @@ mkdir -p /var/lib/ >/dev/null 2>&1
 echo "IP=" >> /var/lib/ipvps.conf
 
 echo ""
-wget -q https://raw.githubusercontent.com/Tarap-Kuhing/tarong/main/tarong/Installsl.shi;chmod +x Installsl.sh;./Installsl.sh
+wget -q https://raw.githubusercontent.com/Tarap-Kuhing/tarong/main/tarong/Installsl.sh;chmod +x Installsl.sh;./Installsl.sh
 clear
 yellow "Add Domain for vmess/vless/trojan dll"
 echo " "
