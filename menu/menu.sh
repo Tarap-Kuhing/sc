@@ -158,11 +158,11 @@ else
     sts="${Error}"
 fi
 # TOTAL ACC CREATE VMESS WS
-vmess=$(grep -c -E "^#vmg " "/usr/local/etc/xray/config.json")
+vmess=$(grep -c -E "^#vmg " "/etc/xray/config.json")
 # TOTAL ACC CREATE  VLESS WS
-vless=$(grep -c -E "^#vlg " "/usr/local/etc/xray/vless.json")
+vless=$(grep -c -E "^#vlg " "/etc/xray/vless.json")
 # TOTAL ACC CREATE  TROJAN
-trtls=$(grep -c -E "^#tr " "/usr/local/etc/xray/trojan.json")
+trtls=$(grep -c -E "^#tr " "/etc/xray/trojan.json")
 # TOTAL ACC CREATE OVPN SSH
 total_ssh="$(awk -F: '$3 >= 1000 && $1 != "nobody" {print $1}' /etc/passwd | wc -l)"
 function updatews(){
@@ -221,10 +221,10 @@ echo -e "$COLOR1 $NC ${WH}Current Domain    ${COLOR1}: ${WH}$(cat /etc/xray/doma
 #echo -e "$COLOR1 $NC ${WH}Nameserver Slowdns${COLOR1}: ${WH}$(cat /root/nsdomain)"
 echo -e "$COLOR1 $NC ${WH}IP-VPS            ${COLOR1}: ${WH}$IPVPS${NC}"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-echo -e "\033[1;93m┌────────────────────────────────────────────────────┐\033[0m"
-echo -e "\033[1;93m│\033[0m ${RED}SSH  VMESS   VLESS  TROJAN   SHADOWSOCKS$NC"
-echo -e "\033[1;93m│\033[0m ${Blue} $ssh     $vmg       $vlg      $tr           $ss   $NC"
-echo -e "\033[1;93m└────────────────────────────────────────────────────┘\033[0m"
+echo -e "\033[1;93m┌───────────────────────────────────────────────┐\033[0m"
+echo -e "\033[1;93m│\033[0m ${RED}SSH  VMESS   VLESS  TROJAN   SHADOWSOCKS                     |$NC"
+echo -e "\033[1;93m│\033[0m ${Blue} $ssh     $vmg       $vlg      $tr           $ss            |$NC"
+echo -e "\033[1;93m└───────────────────────────────────────────────┘\033[0m"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1 $NC ${WH}[ SSH WS : ${status_ws} ${WH}]  ${WH}[ XRAY : ${status_xray} ${WH}]   ${WH}[ NGINX : ${status_nginx} ${WH}] $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
