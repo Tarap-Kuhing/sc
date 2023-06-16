@@ -491,7 +491,7 @@ systemctl restart runn
 
 cd /usr/bin/
 # vmess
-#wget -O add-vmess "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/xray/add-vmess.sh" && chmod +x add-vmess
+wget -O uuid "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/xray/uuid.sh" && chmod +x uuid
 #wget -O trialvmess "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/xray/trialvmess.sh" && chmod +x trialvmess
 #wget -O renew-vmess "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/xray/renew-vmess.sh" && chmod +x renew-vmess
 #wget -O del-vmess "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/xray/del-vmess.sh" && chmod +x del-vmess
