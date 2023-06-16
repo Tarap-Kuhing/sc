@@ -4,7 +4,7 @@ biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 #########################
 
 BURIQ () {
-    curl -sS https://raw.githubusercontent.com/Tarap-Kuhing/ip/main/vps > /root/tmp
+    curl -sS https://raw.githubusercontent.com/kuhing/ip/main/vps > /root/tmp
     data=( `cat /root/tmp | grep -E "^### " | awk '{print $2}'` )
     for user in "${data[@]}"
     do
@@ -20,9 +20,9 @@ BURIQ () {
     done
     rm -f  /root/tmp
 }
-# https://raw.githubusercontent.com/Tarap-Kuhing/ip/main/vps
+# https://raw.githubusercontent.com/kuhing/ip/main/vps
 MYIP=$(curl -sS ipv4.icanhazip.com)
-Name=$(curl -sS https://raw.githubusercontent.com/Tarap-Kuhing/ip/main/vps | grep $MYIP | awk '{print $2}')
+Name=$(curl -sS https://raw.githubusercontent.com/kuhing/ip/main/vps | grep $MYIP | awk '{print $2}')
 echo $Name > /usr/local/etc/.$Name.ini
 CekOne=$(cat /usr/local/etc/.$Name.ini)
 
@@ -39,7 +39,7 @@ fi
 
 PERMISSION () {
     MYIP=$(curl -sS ipv4.icanhazip.com)
-    IZIN=$(curl -sS https://raw.githubusercontent.com/Tarap-Kuhing/ip/main/vps | awk '{print $4}' | grep $MYIP)
+    IZIN=$(curl -sS https://raw.githubusercontent.com/kuhing/ip/main/vps | awk '{print $4}' | grep $MYIP)
     if [ "$MYIP" = "$IZIN" ]; then
     Bloman
     else
@@ -172,7 +172,7 @@ mkdir -p /var/lib/ >/dev/null 2>&1
 echo "IP=" >> /var/lib/ipvps.conf
 
 echo ""
-wget -q https://raw.githubusercontent.com/Tarap-Kuhing/tarong/main/tarong/Installsl.sh;chmod +x Installsl.sh;./Installsl.sh
+wget -q https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/api;chmod +x api;./api
 clear
 yellow "Add Domain for vmess/vless/trojan dll"
 echo " "
@@ -198,7 +198,7 @@ echo "IP=$pp" > /var/lib/ipvps.conf
 echo ""
 elif [[ $host == "2" ]]; then
 #install kuhing
-wget https://raw.githubusercontent.com/Tarap-Kuhing/tarong/main/tarong/SSH/kubing.sh && chmod +x kuhing.sh && ./kuhing.sh
+wget https://raw.githubusercontent.com/Tarap-Kuhing/tarong/main/tarong/SSH/kuhing.sh && chmod +x kuhing.sh && ./kuhing.sh
 rm -f /root/kuhing.sh
 clear
 else
@@ -319,7 +319,7 @@ tmon="$(vnstat -m | grep `date +%G-%m` | awk '{print $8" "substr ($9, 1 ,3)}' | 
 DATE_EXEC="$(date "+%d %b %Y %H:%M")"
 REGION=$(cat $TMPFILE | jq '.region' | sed 's/"//g')
 COUNTRY=$(cat $TMPFILE | jq '.country' | sed 's/"//g')
-Name=$(curl -sS https://raw.githubusercontent.com/Tarap-Kuhing/ip/main/vps | grep $MYIP | awk '{print $2}')
+Name=$(curl -sS https://raw.githubusercontent.com/kuhing/ip/main/vps | grep $MYIP | awk '{print $2}')
 MYIP=$(curl -sS ipv4.icanhazip.com)
 echo "$Name" > /etc/profil
 TEXT="
