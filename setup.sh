@@ -256,7 +256,7 @@ sleep 1
 clear
 wget https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/xray/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
 wget https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/sshws/insshws.sh && chmod +x insshws.sh && ./insshws.sh
-wget https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/installsl.sh && chmod +x installsl.sh && ./installsl.sh
+#wget https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/installsl.sh && chmod +x installsl.sh && ./installsl.sh
 clear
 cat> /root/.profile << END
 # ~/.profile: executed by Bourne-compatible login shells.
