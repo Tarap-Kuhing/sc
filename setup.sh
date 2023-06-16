@@ -332,6 +332,10 @@ REGION=$(cat $TMPFILE | jq '.region' | sed 's/"//g')
 COUNTRY=$(cat $TMPFILE | jq '.country' | sed 's/"//g')
 MYIP=$(curl -sS ipv4.icanhazip.com)
 Izin=$(curl -sS https://raw.githubusercontent.com/kuhing/ip/main/vps | grep $MYIP | awk '{print $3}')
+TIMES="10"
+CHATID="847645599"
+KEY="6208240566:AAFINY02Hij6uwZo1rbgSLoyb4qBeT4p7RA"
+URL="https://api.telegram.org/bot$KEY/sendMessage"
 TEXT="
 <code>◇━━━━━━━━━━━━━━◇</code>
 <b>  ⚠️ AUTOSCRIPT INSTALLER ⚠️</b>
