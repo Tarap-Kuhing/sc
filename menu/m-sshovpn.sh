@@ -153,33 +153,33 @@ TEXT="
 <code>──────────────────</code>
 <code>Username        : </code> <code>$Login</code>
 <code>Password        : </code> <code>$Pass</code>
-<code>Expired          : </code> <code>$exp</code>
+<code>Expired         : </code> <code>$exp</code>
 <code>──────────────────</code>
-<code>IP               : </code> <code>$IP</code>
-<code>ISP              : </code> <code>$ISP </code>
-<code>CITY             : </code> <code>$CITY</code>
-<code>Host             : </code> <code>$domen</code>
+<code>IP              : </code> <code>$IP</code>
+<code>ISP             : </code> <code>$ISP </code>
+<code>CITY            : </code> <code>$CITY</code>
+<code>Host            : </code> <code>$domen</code>
 <code>Host Slowdns    : </code> <code>$sldomain</code>
-<code>Pub Key          : </code> <code> $slkey</code>
+<code>Pub Key         : </code> <code> $slkey</code>
 <code>Port OpenSSH    : </code> <code>$opensh</code>
-<code>Port Dropbear    : </code> <code>$db</code>
-<code>Port DNS         : </code> <code>80, 443,53</code> 
+<code>Port Dropbear   : </code> <code>$db</code>
+<code>Port DNS        : </code> <code>80, 443,53</code> 
 <code>Port SSH WS     : </code> <code>80, 8080</code>
 <code>Port SSH SSL WS : </code> <code>$wsssl</code>
-<code>Port SSL/TLS     : </code> <code>8443,8880</code>
-<code>Port OVPN WS SSL : </code> <code>2086</code>
-<code>Port OVPN SSL    : </code> <code>990</code>
-<code>Port OVPN TCP    : </code> <code>$ovpn</code>
-<code>Port OVPN UDP    : </code> <code>$ovpn2</code>
-<code>Proxy Squid        : </code> <code>3128</code>
-<code>BadVPN UDP       : </code> <code>7100, 7300, 7300</code>
+<code>Port SSL/TLS    : </code> <code>8443,8880</code>
+<code>Port OVPN WS SSL: </code> <code>2086</code>
+<code>Port OVPN SSL   : </code> <code>990</code>
+<code>Port OVPN TCP   : </code> <code>$ovpn</code>
+<code>Port OVPN UDP   : </code> <code>$ovpn2</code>
+<code>Proxy Squid     : </code> <code>3128</code>
+<code>BadVPN UDP      : </code> <code>7100, 7300, 7300</code>
 <code>───────────────────</code>
-<code>SSH UDP VIRAL :</code> <code>$domen:100-200@$Login:$Pass</code>
-<code>Payload WS   : </code> <code>GET / HTTP/1.1[crlf]Host: $domen[crlf]Upgrade: websocket[crlf][crlf]</code>
+<code>SSH UDP         : </code> <code>$domen:1-65535@$Login:$Pass</code>
+<code>Payload WS      : </code> <code>GET / HTTP/1.1[crlf]Host: $domen[crlf]Upgrade: websocket[crlf][crlf]</code>
 <code>───────────────────</code>
-<code>OpenVPN SSL      : </code> https://$IP:89/ssl.ovpn
-<code>OpenVPN TCP      : </code> https://$IP:89/tcp.ovpn
-<code>OpenVPN UDP      : </code> https://$IP:89/udp.ovpn
+<code>OpenVPN SSL     : </code> https://$IP:89/ssl.ovpn
+<code>OpenVPN TCP     : </code> https://$IP:89/tcp.ovpn
+<code>OpenVPN UDP     : </code> https://$IP:89/udp.ovpn
 <code>───────────────────</code>
 <code>           $author                       </code>
 <code>───────────────────</code>
@@ -359,33 +359,33 @@ TEXT="
 <code>──────────────────</code>
 <code>Username        : </code> <code>$Login</code>
 <code>Password        : </code> <code>$Pass</code>
-<code>Expired          : </code> <code>$exp</code>
+<code>Expired         : </code> <code>$exp</code>
 <code>──────────────────</code>
-<code>IP               : </code> <code>$IP</code>
-<code>ISP              : </code> <code>$ISP </code>
-<code>CITY             : </code> <code>$CITY</code>
-<code>Host             : </code> <code>$domen</code>
+<code>IP              : </code> <code>$IP</code>
+<code>ISP             : </code> <code>$ISP </code>
+<code>CITY            : </code> <code>$CITY</code>
+<code>Host            : </code> <code>$domen</code>
 <code>Host Slowdns    : </code> <code>$sldomain</code>
-<code>Pub Key          : </code> <code> $slkey</code>
+<code>Pub Key         : </code> <code> $slkey</code>
 <code>Port OpenSSH    : </code> <code>$opensh</code>
-<code>Port Dropbear    : </code> <code>$db</code>
-<code>Port DNS         : </code> <code>80, 443,53</code> 
+<code>Port Dropbear   : </code> <code>$db</code>
+<code>Port DNS        : </code> <code>80, 443,53</code> 
 <code>Port SSH WS     : </code> <code>80, 8080</code>
 <code>Port SSH SSL WS : </code> <code>$wsssl</code>
-<code>Port SSL/TLS     : </code> <code>8443,8880</code>
-<code>Port OVPN WS SSL : </code> <code>2086</code>
-<code>Port OVPN SSL    : </code> <code>990</code>
-<code>Port OVPN TCP    : </code> <code>$ovpn</code>
-<code>Port OVPN UDP    : </code> <code>$ovpn2</code>
-<code>Proxy Squid        : </code> <code>3128</code>
-<code>BadVPN UDP       : </code> <code>7100, 7300, 7300</code>
+<code>Port SSL/TLS    : </code> <code>8443,8880</code>
+<code>Port OVPN WS SSL: </code> <code>2086</code>
+<code>Port OVPN SSL   : </code> <code>990</code>
+<code>Port OVPN TCP   : </code> <code>$ovpn</code>
+<code>Port OVPN UDP   : </code> <code>$ovpn2</code>
+<code>Proxy Squid     : </code> <code>3128</code>
+<code>BadVPN UDP      : </code> <code>7100, 7300, 7300</code>
 <code>───────────────────</code>
-<code>SSH UDP VIRAL :</code> <code>$domen:100-200@$Login:$Pass</code>
-<code>Payload WS   : </code> <code>GET / HTTP/1.1[crlf]Host: $domen[crlf]Upgrade: websocket[crlf][crlf]</code>
+<code>SSH UDP         : </code> <code>$domen:1-65535@$Login:$Pass</code>
+<code>Payload WS      : </code> <code>GET / HTTP/1.1[crlf]Host: $domen[crlf]Upgrade: websocket[crlf][crlf]</code>
 <code>───────────────────</code>
-<code>OpenVPN SSL      : </code> https://$IP:89/ssl.ovpn
-<code>OpenVPN TCP      : </code> https://$IP:89/tcp.ovpn
-<code>OpenVPN UDP      : </code> https://$IP:89/udp.ovpn
+<code>OpenVPN SSL     : </code> https://$IP:89/ssl.ovpn
+<code>OpenVPN TCP     : </code> https://$IP:89/tcp.ovpn
+<code>OpenVPN UDP     : </code> https://$IP:89/udp.ovpn
 <code>───────────────────</code>
 <code>           $author                       </code>
 <code>───────────────────</code>
