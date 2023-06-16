@@ -160,9 +160,11 @@ fi
 # TOTAL ACC CREATE VMESS WS
 vmess=$(grep -c -E "^#vmg " "/etc/xray/config.json")
 # TOTAL ACC CREATE  VLESS WS
-vless=$(grep -c -E "^#vlg " "/etc/xray/vless.json")
+vless=$(grep -c -E "^#vlg " "/etc/xray/config.json")
 # TOTAL ACC CREATE  TROJAN
-trtls=$(grep -c -E "^#tr " "/etc/xray/trojan.json")
+trtls=$(grep -c -E "^#tr " "/etc/xray/config.json")
+# TOTAL ACC CREATE  TROJAN
+ss=$(grep -c -E "^#ss " "/etc/xray/config.json")
 # TOTAL ACC CREATE OVPN SSH
 total_ssh="$(awk -F: '$3 >= 1000 && $1 != "nobody" {print $1}' /etc/passwd | wc -l)"
 function updatews(){
@@ -223,7 +225,7 @@ echo -e "$COLOR1 $NC ${WH}IP-VPS            ${COLOR1}: ${WH}$IPVPS${NC}"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "\033[1;93m\033[0m ${RED}SSH  VMESS   VLESS  TROJAN   SHADOWSOCKS$NC"
-echo -e "\033[1;93m\033[0m ${Blue} $ssh     $vmg       $vlg      $tr           $ss   $NC"
+echo -e "\033[1;93m\033[0m   ${Blue} $total_ssh     $vmess       $vless      $trtls           $ss   $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1 $NC ${WH}[ SSH WS : ${status_ws} ${WH}]  ${WH}[ XRAY : ${status_xray} ${WH}]   ${WH}[ NGINX : ${status_nginx} ${WH}] $COLOR1 $NC"
