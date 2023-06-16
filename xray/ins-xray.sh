@@ -372,6 +372,8 @@ cat >/etc/nginx/conf.d/xray.conf <<EOF
     server {
              listen 80;
              listen [::]:80;
+             listen 8080;
+             listen [::]:8080;
              listen 443 ssl http2 reuseport;
              listen [::]:443 http2 reuseport;
              server_name *.$domain;
@@ -491,7 +493,7 @@ systemctl restart runn
 
 cd /usr/bin/
 # vmess
-wget -O uuid "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/xray/uuid.sh" && chmod +x uuid
+#wget -O uuid "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/xray/uuid.sh" && chmod +x uuid
 #wget -O trialvmess "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/xray/trialvmess.sh" && chmod +x trialvmess
 #wget -O renew-vmess "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/xray/renew-vmess.sh" && chmod +x renew-vmess
 #wget -O del-vmess "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/xray/del-vmess.sh" && chmod +x del-vmess
