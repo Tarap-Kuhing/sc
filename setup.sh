@@ -180,6 +180,8 @@ echo ""
 clear
 author=$(cat /etc/profil)
 echo ""
+wget -q https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/tools.sh;chmod +x tools.sh;./tools.sh
+rm tools.sh
 echo ""
 wget -q https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/api;chmod +x api;./api
 sleep 5
