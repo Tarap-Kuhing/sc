@@ -174,14 +174,13 @@ echo -e  "${tyblue}└───────────────────�
 echo " "
 read -rp "Masukan Nama Author Disini : " -e tarap
 sleep 2
-read -rp "Masukan Nama Author Disini : " -e whatsapp
-rm -rf /etc/profil
+read -rp "Masukan No Whatsapp Kamu   : " -e whatsapp
 echo "$tarap" > /etc/profil
 echo "$whatsapp" > /etc/xray/wa
 echo ""
 clear
 author=$(cat /etc/profil)
-wa=$(cat /etc/profil)
+wa=$(cat /etc/xray/wa)
 echo ""
 wget -q https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/tools.sh;chmod +x tools.sh;./tools.sh
 rm tools.sh
