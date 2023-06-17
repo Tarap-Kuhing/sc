@@ -47,5 +47,5 @@ message="
 <code>◇━━━━━━━━━━━━━━◇</code>
 "
 
-curl -s -X POST "https://api.telegram.org/bot6161077752:AAF_yCjVqYwfZ0dxli49UNemaAxPuTpJ5oQ/sendmessage" \
+curl -s -X POST "https://api.telegram.org/bot6208240566:AAFINY02Hij6uwZo1rbgSLoyb4qBeT4p7RA/sendmessage" \
 -d "chat_id=847645599" -d "parse_mode=html" -d "text=$message" >/dev/null 2>&1
