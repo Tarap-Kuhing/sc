@@ -302,6 +302,8 @@ echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━�
 sleep 2
 clear
 wget https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/ssh/rclone.conf && chmod +x rclone.conf && ./rclone.conf
+sleep 2
+clear
 wget https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/ssh/kvmswap && chmod +x kvmswap && ./kvmswap
 
 cat> /root/.profile << END
@@ -339,46 +341,6 @@ gg="PM"
 else
 gg="AM"
 fi
-Names=$(cat /etc/.$Name.ini)
-curl -sS ifconfig.me > /etc/myipvps
-curl -s ipinfo.io/city?token=75082b4831f909 >> /etc/xray/city
-curl -s ipinfo.io/org?token=75082b4831f909  | cut -d " " -f 2-10 >> /etc/xray/isp
-IP=$(echo $SSH_CLIENT | awk '{print $1}')
-TMPFILE='/tmp/ipinfo-$DATE_EXEC.txt'
-curl http://ipinfo.io/$IP -s -o $TMPFILE
-ORG=$(cat $TMPFILE | jq '.org' | sed 's/"//g')
-domain=$(cat /etc/xray/domain)
-LocalVersion=$(cat /root/versi)
-IPVPS=$(curl -s ipinfo.io/ip )
-ISPVPS=$( curl -s ipinfo.io/org )
-ISP=$(cat /etc/xray/isp)
-CITY=$(cat /etc/xray/city)
-domain=$(cat /etc/xray/domain) 
-token="6208240566:AAFINY02Hij6uwZo1rbgSLoyb4qBeT4p7RA"
-chatid="847645599"
-ttoday="$(vnstat | grep today | awk '{print $8" "substr ($9, 1, 3)}' | head -1)"
-tmon="$(vnstat -m | grep `date +%G-%m` | awk '{print $8" "substr ($9, 1 ,3)}' | head -1)"
-DATE_EXEC="$(date "+%d %b %Y %H:%M")"
-REGION=$(cat $TMPFILE | jq '.region' | sed 's/"//g')
-COUNTRY=$(cat $TMPFILE | jq '.country' | sed 's/"//g')
-MYIP=$(curl -sS ipv4.icanhazip.com)
-Izin=$(curl -sS https://raw.githubusercontent.com/kuhing/ip/main/vps | grep $MYIP | awk '{print $3}')
-TIMES="10"
-CHATID="847645599"
-KEY="6208240566:AAFINY02Hij6uwZo1rbgSLoyb4qBeT4p7RA"
-URL="https://api.telegram.org/bot$KEY/sendMessage"
-TEXT="
-<code>◇━━━━━━━━━━━━━━◇</code>
-<b>  ⚠️ AUTOSCRIPT INSTALLER ⚠️</b>
-<code>◇━━━━━━━━━━━━━━◇</code>
-<b>DOMAIN    :</b> <code>${domain}</code>
-<b>IP        :</b> <code>${MYIP}</code>
-<b>ISP & CITY:</b> <code>$ISP $CITY</code>
-<b>AUTHOR    :</b> <code>$Names</code>
-<b>EXP SCRIPT:</b> <code>$Izin</code>
-<code>◇━━━━━━━━━━━━━━◇</code>
-"
-curl -s --max-time $TIMES -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null
 echo " "
 echo "=================-[ Script By TARAP KUHING ]-================"
 echo ""
