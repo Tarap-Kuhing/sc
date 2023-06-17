@@ -335,8 +335,8 @@ wget -O m-tcp "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/menu/tcp.s
 
 # change port
 #wget -O port-ssl "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/port/port-ssl.sh"
-#wget -O port-ovpn "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/port/port-ovpn.sh"
-#wget -O port-tr "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/port/port-tr.sh"
+wget -O backup "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/ssh/backup.sh"
+wget -O bckp "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/ssh/bckp.sh"
 
 
 wget -O xp "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/ssh/xp.sh"
@@ -380,8 +380,8 @@ chmod +x bw
 chmod +x m-tcp
 
 #chmod +x port-ssl
-#chmod +x port-ovpn
-#chmod +x port-tr
+chmod +x backup
+chmod +x bckp
 chmod +x xp
 chmod +x m-theme
 cd
