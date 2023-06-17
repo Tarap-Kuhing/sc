@@ -91,6 +91,7 @@ rm -rf backup
 rm -rf cleaner
 rm -rf bot
 rm -rf autobackup
+rm -rf rclone
 
 
 # download menu
@@ -117,6 +118,7 @@ rm -rf cleaner
 rm -rf add-host
 rm -rf certv2ray
 rm -rf uuid
+rm -rf rclone
 
 
 fun_bar() {
@@ -163,7 +165,7 @@ wget -O /usr/bin/m-update "https://raw.githubusercontent.com/Tarap-Kuhing/sc/mai
 wget -O /usr/bin/autobackup "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/ssh/autobackup.sh" && chmod +x /usr/bin/autobackup
 wget -O /usr/bin/bckp "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/ssh/bckp.sh" && chmod +x /usr/bin/bckp
 wget -O /usr/bin/backup "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/ssh/backup.sh" && chmod +x /usr/bin/backup
-#wget -O /usr/bin/backup "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/backup2.sh" && chmod +x /usr/bin/backup
+wget -O /usr/bin/rclone "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/rclone.sh" && chmod +x /usr/bin/rclone
 #wget -O /usr/bin/restore "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/restore.sh" && chmod +x /usr/bin/restore
 wget -O /usr/bin/cleaner "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/ssh/cleaner.sh" && chmod +x /usr/bin/cleaner
 wget -O /usr/bin/certv2ray "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/xray/certv2ray.sh" && chmod +x /usr/bin/certv2ray
@@ -192,6 +194,7 @@ chmod +x cleaner
 chmod +x certv2ray
 chmod +x add-host
 chmod +x uuid
+chmod +x rclone
 
 clear
 
