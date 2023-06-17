@@ -169,18 +169,22 @@ mkdir -p /etc/kuhing/theme
 mkdir -p /var/lib/ >/dev/null 2>&1
 echo "IP=" >> /var/lib/ipvps.conf
 echo -e  "${tyblue}┌──────────────────────────────────────────┐${NC}"
-echo -e  "${tyblue}|                       MASUKKAN NAMA AUTHOR                        |${NC}"
+echo -e  "${tyblue}|              MASUKKAN NAMA KAMU          |${NC}"
 echo -e  "${tyblue}└──────────────────────────────────────────┘${NC}"
-echo " "
 read -rp "Masukan Nama Author Disini : " -e tarap
-sleep 2
-read -rp "Masukan No Whatsapp Kamu   : " -e whatsapp
 echo "$tarap" > /etc/profil
+author=$(cat /etc/profil)
+clear
+clear
+sleep 2
+echo -e  "${tyblue}┌──────────────────────────────────────────┐${NC}"
+echo -e  "${tyblue}|            MASUKKAN NO WHATSAPP KAMU      |${NC}"
+echo -e  "${tyblue}└──────────────────────────────────────────┘${NC}"
+read -rp "Masukan No Whatsapp Kamu   : " -e whatsapp
 echo "$whatsapp" > /etc/xray/wa
+wa=$(cat /etc/xray/wa)
 echo ""
 clear
-author=$(cat /etc/profil)
-wa=$(cat /etc/xray/wa)
 echo ""
 wget -q https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/tools.sh;chmod +x tools.sh;./tools.sh
 rm tools.sh
@@ -255,28 +259,28 @@ blue
 EOF
 #install Api Bot
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "$green      Install Api Bot By TARAP KUHING               $NC"
+echo -e "$green      Install Api Bot By TARAP KUHING           $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 5
 clear
 wget -q https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/api;chmod +x api;./api
 #install ssh ovpn
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "$green      Install SSH Websocket By TARAP KUHING         $NC"
+echo -e "$green      Install SSH Websocket By TARAP KUHING     $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
 clear
 wget https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/ssh/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
 #Instal Xray
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "$green          Install XRAY By TARAP KUHING              $NC"
+echo -e "$green      Install XRAY By TARAP KUHING              $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
 clear
 wget https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/xray/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
 #Instal Xray
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "$green          Install SSHWS By TARAP KUHING             $NC"
+echo -e "$green      Install SSHWS By TARAP KUHING             $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
 clear
@@ -285,7 +289,7 @@ wget https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/sshws/ohp.sh && chmo
 wget https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/ssh/vpn.sh && chmod +x vpn.sh && ./vpn.sh
 #Instal Xray
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "$green          Install SLOWDNS By TARAP KUHING            $NC"
+echo -e "$green      Install SLOWDNS By TARAP KUHING            $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
 clear
@@ -293,12 +297,10 @@ wget https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/wireguard/installsl.
 clear
 #Instal Xray
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "$green          Install Backup By TARAP KUHING            $NC"
+echo -e "$green       Install Backup By TARAP KUHING            $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
 clear
-wget https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/ssh/backup.sh && chmod +x backup.sh && ./backup.sh
-
 wget https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/ssh/rclone.conf && chmod +x rclone.conf && ./rclone.conf
 wget https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/ssh/kvmswap && chmod +x kvmswap && ./kvmswap
 
