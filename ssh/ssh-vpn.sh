@@ -303,7 +303,7 @@ wget -O m-bot "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/menu/m-bot
 
 # menu ssh ovpn
 wget -O m-sshovpn "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/menu/m-sshovpn.sh"
-#wget -O usernew "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/ssh/usernew.sh"
+wget -O backup "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/ssh/backup.sh"
 #wget -O trial "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/ssh/trial.sh"
 #wget -O renew "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/ssh/renew.sh"
 #wget -O hapus "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/ssh/hapus.sh"
@@ -350,7 +350,7 @@ chmod +x m-update
 chmod +x m-bot
 
 chmod +x m-sshovpn
-#chmod +x usernew
+chmod +x backup
 #chmod +x trial
 #chmod +x renew
 #chmod +x hapus
