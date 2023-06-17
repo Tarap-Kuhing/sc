@@ -83,13 +83,14 @@ rm -rf m-theme
 rm -rf m-ip
 rm -rf m-bot
 rm -rf update
-#rm -rf ws-dropbear
+rm -rf bckp
 rm -rf tendang
 rm -rf bottelegram
 rm -rf restore
-rm -rf backup2
+rm -rf backup
 rm -rf cleaner
 rm -rf bot
+rm -rf autobackup
 
 
 # download menu
@@ -107,11 +108,11 @@ rm -rf m-theme
 rm -rf m-domain
 rm -rf m-bot
 rm -rf update
-#rm -rf ws-dropbear
+rm -rf bckp
 rm -rf tendang
-#rm -rf bottelegram
+rm -rf autobackup
 #rm -rf restore
-#rm -rf backup
+rm -rf backup
 rm -rf cleaner
 rm -rf add-host
 rm -rf certv2ray
@@ -159,9 +160,9 @@ wget -O /usr/bin/m-theme "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main
 wget -O /usr/bin/m-domain "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/menu/m-domain.sh" && chmod +x /usr/bin/m-domain
 wget -O /usr/bin/m-bot "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/menu/m-bot.sh" && chmod +x /usr/bin/m-bot
 wget -O /usr/bin/m-update "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/menu/m-update.sh" && chmod +x /usr/bin/update
-#wget -O /usr/bin/ws-dropbear "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/sshws/ws-dropbear" && chmod +x /usr/bin/ws-dropbear
-#wget -O /usr/bin/tendang "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/ssh/tendang.sh" && chmod +x /usr/bin/tendang
-#wget -O /usr/bin/bottelegram "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/bottelegram.sh" && chmod +x /usr/bin/bottelegram
+wget -O /usr/bin/autobackup "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/ssh/autobackup.sh" && chmod +x /usr/bin/autobackup
+wget -O /usr/bin/bckp "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/ssh/bckp.sh" && chmod +x /usr/bin/bckp
+wget -O /usr/bin/backup "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/ssh/backup.sh" && chmod +x /usr/bin/backup
 #wget -O /usr/bin/backup "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/backup2.sh" && chmod +x /usr/bin/backup
 #wget -O /usr/bin/restore "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/restore.sh" && chmod +x /usr/bin/restore
 wget -O /usr/bin/cleaner "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/ssh/cleaner.sh" && chmod +x /usr/bin/cleaner
@@ -183,9 +184,9 @@ chmod +x m-theme
 chmod +x m-domain
 chmod +x m-bot
 chmod +x update
-#chmod +x tendang
-#chmod +x bottelegram
-#chmod +x backup2
+chmod +x autobackup
+chmod +x bckp
+chmod +x backup
 #chmod +x restore
 chmod +x cleaner
 chmod +x certv2ray
