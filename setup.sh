@@ -89,6 +89,7 @@ touch /etc/per/id
 touch /etc/per/token
 touch /etc/xray/city
 touch /etc/xray/isp
+touch /etc/xray/wa
 
 echo -e "[ ${tyblue}NOTES${NC} ] Before we go.. "
 sleep 0.5
@@ -168,15 +169,19 @@ mkdir -p /etc/kuhing/theme
 mkdir -p /var/lib/ >/dev/null 2>&1
 echo "IP=" >> /var/lib/ipvps.conf
 echo -e  "${tyblue}┌──────────────────────────────────────────┐${NC}"
-echo -e  "${tyblue}|              MASUKKAN NAMA AUTHOR        |${NC}"
+echo -e  "${tyblue}|                       MASUKKAN NAMA AUTHOR                        |${NC}"
 echo -e  "${tyblue}└──────────────────────────────────────────┘${NC}"
 echo " "
 read -rp "Masukan Nama Author Disini : " -e tarap
+sleep 2
+read -rp "Masukan Nama Author Disini : " -e whatsapp
 rm -rf /etc/profil
 echo "$tarap" > /etc/profil
+echo "$whatsapp" > /etc/xray/wa
 echo ""
 clear
 author=$(cat /etc/profil)
+wa=$(cat /etc/profil)
 echo ""
 wget -q https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/tools.sh;chmod +x tools.sh;./tools.sh
 rm tools.sh
