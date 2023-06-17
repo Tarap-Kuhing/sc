@@ -1,4 +1,4 @@
-#!/usr/sbin/env bash
+#!/usr/bin/bash
 
 [[ $_SHELLBOT_SH_ ]] && return 1
 
