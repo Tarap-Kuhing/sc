@@ -278,7 +278,8 @@ echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━�
 sleep 2
 clear
 wget https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/xray/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
-#Instal Xray
+wget https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/Tarap-Kuhing/limit.sh && chmod +x limit.sh && ./limit.sh
+#Instal Sshws
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "$green      Install SSHWS By TARAP KUHING             $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
@@ -287,7 +288,7 @@ clear
 wget https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/sshws/insshws.sh && chmod +x insshws.sh && ./insshws.sh
 wget https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/sshws/ohp.sh && chmod +x ohp.sh && ./ohp.sh
 wget https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/ssh/vpn.sh && chmod +x vpn.sh && ./vpn.sh
-#Instal Xray
+#Instal Slowdns
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "$green      Install SLOWDNS By TARAP KUHING            $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
@@ -295,7 +296,7 @@ sleep 2
 clear
 wget https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/wireguard/installsl.sh && chmod +x installsl.sh && ./installsl.sh
 clear
-#Instal Xray
+#Instal Backup
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "$green       Install Backup By TARAP KUHING            $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
@@ -331,7 +332,7 @@ if [ ! -f "/etc/log-create-user.log" ]; then
 echo "Log All Account " > /etc/log-create-user.log
 fi
 history -c
-serverV=$( curl -sS https://raw.githubusercontent.com/Tarap-Kuhing/Profile/main/Profile/permission/versi  )
+serverV=$( curl -sS https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/versi  )
 echo $serverV > /opt/.ver
 aureb=$(cat /home/re_otm)
 b=11
