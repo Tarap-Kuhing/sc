@@ -97,7 +97,7 @@ wsssl=`cat /root/log-install.txt | grep -w "SSH SSL Websocket" | cut -d: -f2 | a
 ISP=$(cat /etc/xray/isp)
 CITY=$(cat /etc/xray/city)
 author=$(cat /etc/profil)
-
+wa=$(cat /etc/xray/wa)
 
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}• SSH PANEL MENU •              ${NC} $COLOR1 $NC"
@@ -227,7 +227,7 @@ echo -e "$COLOR1 $NC  ${WH}PUB KEY    ${COLOR1}: ${WH}$slkey"
 #echo -e "$COLOR1 $NC  ${WH}PUB KEY    ${COLOR1}: ${WH}$slkey1"
 echo -e "$COLOR1└────────────────────┘${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1┌────────────────────┐${NC}" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 $NC  ${WH}UDP VIRAL${COLOR1}: ${WH}$domen:1-2288@$Login:$Pass"
+echo -e "$COLOR1 $NC  ${WH}UDP VIRAL${COLOR1}: ${WH}$domen:1-65535@$Login:$Pass"
 echo -e "$COLOR1└────────────────────┘${NC}" | tee -a /etc/log-create-user.log
 #echo -e "$COLOR1┌────────────────────┐${NC}" | tee -a /etc/log-create-user.log
 #echo -e "$COLOR1 ${NC}  ${WH}           Payload WSS                                       ${NC}" | tee -a /etc/log-create-user.log
@@ -279,7 +279,7 @@ echo -e "$COLOR1 $NC  ${WH}PUB KEY    ${COLOR1}: ${WH}$slkey"
 #echo -e "$COLOR1 $NC  ${WH}PUB KEY    ${COLOR1}: ${WH}$slkey1"
 echo -e "$COLOR1└────────────────────┘${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1┌────────────────────┐${NC}" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 $NC  ${WH}UDP VIRAL${COLOR1}: ${WH}$domen:1-2288@$Login:$Pass"
+echo -e "$COLOR1 $NC  ${WH}UDP VIRAL${COLOR1}: ${WH}$domen:1-65535@$Login:$Pass"
 echo -e "$COLOR1└────────────────────┘${NC}" | tee -a /etc/log-create-user.log
 #echo -e "$COLOR1┌────────────────────┐${NC}" | tee -a /etc/log-create-user.log
 #echo -e "$COLOR1 ${NC}  ${WH}           Payload WSS                                       ${NC}" | tee -a /etc/log-create-user.log
@@ -319,6 +319,7 @@ wsssl=`cat /root/log-install.txt | grep -w "SSH SSL Websocket" | cut -d: -f2 | a
 ISP=$(cat /etc/xray/isp)
 CITY=$(cat /etc/xray/city)
 author=$(cat /etc/profil)
+wa=$(cat /etc/xray/wa)
 
 clear
 IP=$(curl -sS ifconfig.me);
@@ -431,7 +432,7 @@ echo -e "$COLOR1 $NC  ${WH}PUB KEY    ${COLOR1}: ${WH}$slkey"
 #echo -e "$COLOR1 $NC  ${WH}PUB KEY    ${COLOR1}: ${WH}$slkey1"
 echo -e "$COLOR1└────────────────────┘${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1┌────────────────────┐${NC}" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 $NC  ${WH}UDP VIRAL${COLOR1}: ${WH}$domen:1-2288@$Login:$Pass"
+echo -e "$COLOR1 $NC  ${WH}UDP VIRAL${COLOR1}: ${WH}$domen:1-65535@$Login:$Pass"
 echo -e "$COLOR1└────────────────────┘${NC}" | tee -a /etc/log-create-user.log
 #echo -e "$COLOR1┌────────────────────┐${NC}" | tee -a /etc/log-create-user.log
 #echo -e "$COLOR1 ${NC}  ${WH}           Payload WSS                                       ${NC}" | tee -a /etc/log-create-user.log
@@ -483,7 +484,7 @@ echo -e "$COLOR1 $NC  ${WH}PUB KEY    ${COLOR1}: ${WH}$slkey"
 #echo -e "$COLOR1 $NC  ${WH}PUB KEY    ${COLOR1}: ${WH}$slkey1"
 echo -e "$COLOR1└────────────────────┘${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1┌────────────────────┐${NC}" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 $NC  ${WH}UDP VIRAL${COLOR1}: ${WH}$domen:1-2288@$Login:$Pass"
+echo -e "$COLOR1 $NC  ${WH}UDP VIRAL${COLOR1}: ${WH}$domen:1-65535@$Login:$Pass"
 echo -e "$COLOR1└────────────────────┘${NC}" | tee -a /etc/log-create-user.log
 #echo -e "$COLOR1┌────────────────────┐${NC}" | tee -a /etc/log-create-user.log
 #echo -e "$COLOR1 ${NC}  ${WH}           Payload WSS                                       ${NC}" | tee -a /etc/log-create-user.log
@@ -721,7 +722,7 @@ echo -e "$COLOR1 $NC  ${WH}PUB KEY    ${COLOR1}: ${WH}$slkey"
 #echo -e "$COLOR1 $NC  ${WH}PUB KEY    ${COLOR1}: ${WH}$slkey1"
 echo -e "$COLOR1└────────────────────┘${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1┌────────────────────┐${NC}" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 $NC  ${WH}UDP VIRAL${COLOR1}: ${WH}$domen:1-2288@$Login:$Pass"
+echo -e "$COLOR1 $NC  ${WH}UDP VIRAL${COLOR1}: ${WH}$domen:1-65535@$Login:$Pass"
 echo -e "$COLOR1└────────────────────┘${NC}" | tee -a /etc/log-create-user.log
 #echo -e "$COLOR1┌────────────────────┐${NC}" | tee -a /etc/log-create-user.log
 #echo -e "$COLOR1 ${NC}  ${WH}           Payload WSS                                       ${NC}" | tee -a /etc/log-create-user.log
@@ -789,6 +790,7 @@ ISP=$(cat /etc/xray/isp)
 CITY=$(cat /etc/xray/city)
 domain=$(cat /etc/xray/domain)
 author=$(cat /etc/profil)
+wa=$(cat /etc/xray/wa)
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1 ${NC} ${COLBG1}              ${WH}• SSH ACTIVE USERS •             ${NC} $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
@@ -1078,7 +1080,7 @@ else
 
 rm -rf /usr/bin/m-udp
 
-wget https://raw.githubusercontent.com/casper9/perv1/main/install/insudp.sh &&  chmod +x insudp.sh && ./insudp.sh
+wget https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/ssh/udp.sh &&  chmod +x udp.sh && ./udp.sh
 
 fi
 cd
@@ -1087,6 +1089,7 @@ rm -rf install-udp
 }
 clear
 author=$(cat /etc/profil)
+wa=$(cat /etc/xray/wa)
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}• SSH PANEL MENU •              ${NC} $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
@@ -1118,7 +1121,7 @@ case $opt in
 07 | 7) clear ; hapuslama ; exit ;;
 08 | 8) clear ; autokill ; exit ;;
 09 | 9) clear ; ceklim ; exit ;;
-10 | 10) clear ; insudp ; exit ;;
+10 | 10) clear ; udp ; exit ;;
 00 | 0) clear ; menu ; exit ;;
 X  | 0) clear ; m-sshovpn ;;
 x) exit ;;
