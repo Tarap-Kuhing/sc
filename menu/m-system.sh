@@ -35,6 +35,7 @@ echo -e " [\e[36m•6\e[0m] Install TCP BBR"
 echo -e " [\e[36m•7\e[0m] Menu Bot"
 echo -e " [\e[36m•8\e[0m] Menu Bckp"
 echo -e " [\e[36m•9\e[0m] Menu Backup"
+echo -e " [\e[36m10\e[0m] Auto Backup"
 echo -e ""
 echo -e " [\e[31m•0\e[0m] \e[31mBACK TO MENU\033[0m"
 echo -e   ""
@@ -54,6 +55,7 @@ case $opt in
 7) clear ; m-bot ; exit ;;
 8) clear ; bckp ; exit ;;
 9) clear ; backup ; exit ;;
+10) clear ; autobackup ; exit ;;
 0) clear ; menu ; exit ;;
 x) exit ;;
 *) echo -e "" ; echo "Anda salah tekan" ; sleep 1 ; m-system ;;
