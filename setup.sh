@@ -181,9 +181,6 @@ echo ""
 wget -q https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/tools.sh;chmod +x tools.sh;./tools.sh
 rm tools.sh
 echo ""
-#wget -q https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/api;chmod +x api;./api
-wget https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/api && chmod +x api && ./api
-sleep 5
 clear
 yellow "Add Domain for vmess/vless/trojan dll"
 echo " "
@@ -252,37 +249,53 @@ EOF
 cat <<EOF>> /etc/kuhing/theme/color.conf
 blue
 EOF
+#install Api Bot
+echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "$green      Install Api Bot By TARAP KUHING               $NC"
+echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+sleep 5
+clear
+wget -q https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/api;chmod +x api;./api
 #install ssh ovpn
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "$green      Install SSH Websocket By TARAP KUHING              $NC"
+echo -e "$green      Install SSH Websocket By TARAP KUHING         $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-sleep 1
+sleep 2
 clear
 wget https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/ssh/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
 #Instal Xray
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "$green          Install XRAY By TARAP KUHING             $NC"
+echo -e "$green          Install XRAY By TARAP KUHING              $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-sleep 1
+sleep 2
 clear
 wget https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/xray/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
 #Instal Xray
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "$green          Install SSHWS By TARAP KUHING             $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-sleep 1
+sleep 2
 clear
 wget https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/sshws/insshws.sh && chmod +x insshws.sh && ./insshws.sh
 wget https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/sshws/ohp.sh && chmod +x ohp.sh && ./ohp.sh
 wget https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/ssh/vpn.sh && chmod +x vpn.sh && ./vpn.sh
 #Instal Xray
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "$green          Install SLOWDNS By TARAP KUHING             $NC"
+echo -e "$green          Install SLOWDNS By TARAP KUHING            $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-sleep 1
+sleep 2
 clear
 wget https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/wireguard/installsl.sh && chmod +x installsl.sh && ./installsl.sh
 clear
+#Instal Xray
+echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "$green          Install Backup By TARAP KUHING            $NC"
+echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+sleep 2
+clear
+wget https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/ssh/rclone.conf && chmod +x rclone.conf && ./rclone.conf
+wget https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/ssh/kvmswap && chmod +x kvmswap && ./kvmswap
+
 cat> /root/.profile << END
 # ~/.profile: executed by Bourne-compatible login shells.
 
