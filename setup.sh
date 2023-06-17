@@ -297,6 +297,8 @@ echo -e "$green          Install Backup By TARAP KUHING            $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
 clear
+wget https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/ssh/backup.sh && chmod +x backup.sh && ./backup.sh
+
 wget https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/ssh/rclone.conf && chmod +x rclone.conf && ./rclone.conf
 wget https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/ssh/kvmswap && chmod +x kvmswap && ./kvmswap
 
