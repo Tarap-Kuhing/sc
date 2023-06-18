@@ -1,4 +1,5 @@
 #!/bin/bash
+# SL
 # ==========================================
 # Color
 RED='\033[0;31m'
@@ -20,29 +21,22 @@ if [[ "$email" = "" ]]; then
 echo "Masukkan Email Untuk Menerima Backup"
 read -rp "Email : " -e email
 cat <<EOF>>/home/email
+$email
 EOF
 fi
 clear
+figlet "Backup"
 echo "Mohon Menunggu , Proses Backup sedang berlangsung !!"
 rm -rf /root/backup
 mkdir /root/backup
-cp -r /root/.acme.sh /root/backup/ &> /dev/null
-cp -r /etc/passwd /root/backup/ &> /dev/null
-cp -r /etc/group /root/backup/ &> /dev/null
-cp -r /etc/shadow /root/backup/ &> /dev/null
-cp -r /etc/gshadow /root/backup/ &> /dev/null
-cp -r /usr/bin/idchat /root/backup/ &> /dev/null
-cp -r /usr/bin/token /root/backup/ &> /dev/null
-cp -r /etc/per/id /root/backup/ &> /dev/null
-cp -r /etc/per/token /root/backup/token2 &> /dev/null
-#cp -r /etc/ppp/chap-secrets /root/backup/chap-secrets &> /dev/null
-cp -r /etc/xray/config.json /root/backup/xray &> /dev/null
-#cp -r /etc/xray/ssh /root/backup/ssh &> /dev/null
-#cp -r /usr/local/etc/xray /root/backup/xray &> /dev/null
-cp -r /etc/nginx/conf.d /root/backup/conf.d/ &> /dev/null
-cp -r /home/vps/public_html /root/backup/public_html &> /dev/null
-cp -r /etc/cron.d /root/backup/cron.d &> /dev/null
-cp -r /etc/crontab /root/backup/crontab &> /dev/null
+cp /etc/passwd backup/
+cp /etc/group backup/
+cp /etc/shadow backup/
+cp /etc/gshadow backup/
+cp -r /etc/xray backup/xray
+cp -r /root/nsdomain backup/nsdomain
+cp -r /etc/slowdns backup/slowdns
+cp -r /home/vps/public_html backup/public_html
 cd /root
 zip -r $IP-$date.zip backup > /dev/null 2>&1
 rclone copy /root/$IP-$date.zip dr:backup/
@@ -56,7 +50,7 @@ IP VPS        : $IP
 Link Backup   : $link
 Tanggal       : $date
 ==================================
-" | mail -s "Backup Data"
+" | mail -s "Backup Data" $email
 rm -rf /root/backup
 rm -r /root/$IP-$date.zip
 clear
@@ -69,5 +63,3 @@ Tanggal       : $date
 ==================================
 "
 echo "Silahkan cek Kotak Masuk $email"
-read -n 1 -s -r -p "Press any key to back on menu"
-menu
