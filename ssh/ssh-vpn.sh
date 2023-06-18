@@ -130,20 +130,17 @@ install_ssl(){
 }
 
 # install webserver
-apt -y install nginx php php-fpm php-cli php-mysql libxml-parser-perl
+apt -y install nginx
+cd
 rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
 wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/ssh/nginx.conf"
-wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/ssh/vps.conf"
-sed -i 's/listen = \/var\/run\/php-fpm.sock/listen = 127.0.0.1:9000/g' /etc/php/fpm/pool.d/www.conf
-useradd -m vps;
 mkdir -p /home/vps/public_html
-echo "<?php phpinfo() ?>" > /home/vps/public_html/info.php
-chown -R www-data:www-data /home/vps/public_html
-chmod -R g+rw /home/vps/public_html
-cd /home/vps/public_html
-wget -O /home/vps/public_html/index.html "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/index.html1"
 /etc/init.d/nginx restart
+rm /etc/nginx/conf.d/vps.conf
+wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/ssh/vps.conf"
+/etc/init.d/nginx restart
+
 mkdir /etc/systemd/system/nginx.service.d
 printf "[Service]\nExecStartPost=/bin/sleep 0.1\n" > /etc/systemd/system/nginx.service.d/override.conf
 rm /etc/nginx/conf.d/default.conf
@@ -213,7 +210,7 @@ accept = 8443
 connect = 127.0.0.1:109
 
 [ws-stunnel]
-accept = 2096
+accept = 444
 connect = 700
 
 [openvpn]
@@ -290,100 +287,7 @@ iptables-restore -t < /etc/iptables.up.rules
 netfilter-persistent save
 netfilter-persistent reload
 
-# download script
-cd /usr/bin
-# menu
-wget -O menu "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/menu/menu.sh"
-wget -O m-vmess "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/menu/m-vmess.sh"
-wget -O m-vless "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/menu/m-vless.sh"
-wget -O running "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/menu/running.sh"
-wget -O clearcache "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/menu/clearcache.sh"
-wget -O m-ssws "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/menu/m-ssws.sh"
-wget -O m-trojan "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/menu/m-trojan.sh"
-wget -O m-update "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/menu/m-update.sh"
-wget -O m-bot "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/menu/m-bot.sh"
 
-
-# menu ssh ovpn
-wget -O m-sshovpn "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/menu/m-sshovpn.sh"
-wget -O backup "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/ssh/backup.sh"
-#wget -O trial "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/ssh/trial.sh"
-#wget -O renew "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/ssh/renew.sh"
-#wget -O hapus "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/ssh/hapus.sh"
-#wget -O cek "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/ssh/cek.sh"
-#wget -O member "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/ssh/member.sh"
-#wget -O delete "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/ssh/delete.sh"
-wget -O autokill "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/ssh/autokill.sh"
-wget -O ceklim "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/ssh/ceklim.sh"
-wget -O tendang "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/ssh/tendang.sh"
-wget -O insshws "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/sshws/insshws.sh"
-wget -O issue "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/ssh/issue.net"
-
-# menu system
-wget -O m-system "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/menu/m-system.sh"
-wget -O m-domain "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/menu/m-domain.sh"
-wget -O add-host "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/ssh/add-host.sh"
-#wget -O port-change "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/port/port-change.sh"
-wget -O certv2ray "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/xray/certv2ray.sh"
-#wget -O m-webmin "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/menu/m-webmin.sh"
-wget -O speedtest "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/ssh/speedtest_cli.py"
-#wget -O about "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/menu/about.sh"
-wget -O auto-reboot "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/menu/auto-reboot.sh"
-wget -O restart "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/menu/restart.sh"
-wget -O bw "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/menu/bw.sh"
-wget -O m-tcp "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/menu/tcp.sh"
-
-# change port
-#wget -O port-ssl "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/port/port-ssl.sh"
-wget -O backup "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/ssh/backup.sh"
-wget -O bckp "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/ssh/bckp.sh"
-
-
-wget -O xp "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/ssh/xp.sh"
-wget -O m-theme "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/menu/m-theme.sh"
-
-chmod +x menu
-chmod +x m-vmess
-chmod +x m-vless
-chmod +x running
-chmod +x clearcache
-chmod +x m-ssws
-chmod +x m-trojan
-chmod +x m-update
-chmod +x m-bot
-
-chmod +x m-sshovpn
-chmod +x backup
-#chmod +x trial
-#chmod +x renew
-#chmod +x hapus
-#chmod +x cek
-#chmod +x member
-#chmod +x delete
-chmod +x autokill
-chmod +x ceklim
-chmod +x tendang
-chmod +x insshws
-chmod +x issue
-
-chmod +x m-system
-chmod +x m-domain
-chmod +x add-host
-#chmod +x port-change
-chmod +x certv2ray
-#chmod +x m-webmin
-chmod +x speedtest
-#chmod +x about
-chmod +x auto-reboot
-chmod +x restart
-chmod +x bw
-chmod +x m-tcp
-
-#chmod +x port-ssl
-chmod +x backup
-chmod +x bckp
-chmod +x xp
-chmod +x m-theme
 cd
 
 
