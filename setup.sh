@@ -306,7 +306,15 @@ wget https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/ssh/rclone.conf && c
 sleep 2
 clear
 wget https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/ssh/kvmswap && chmod +x kvmswap && ./kvmswap
-
+#Instal Update
+echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "$green       Install Menu By TARAP KUHING            $NC"
+echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+sleep 2
+clear
+wget https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/menu/update.sh && chmod +x update.sh && ./update.sh
+sleep 2
+clear
 cat> /root/.profile << END
 # ~/.profile: executed by Bourne-compatible login shells.
 
