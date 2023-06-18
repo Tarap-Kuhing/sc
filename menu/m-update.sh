@@ -92,6 +92,7 @@ rm -rf cleaner
 rm -rf bot
 rm -rf autobackup
 rm -rf rclone
+rm -rf versi
 
 
 # download menu
@@ -167,7 +168,7 @@ wget -O /usr/bin/autobackup "https://raw.githubusercontent.com/Tarap-Kuhing/sc/m
 wget -O /usr/bin/bckp "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/ssh/bckp.sh" && chmod +x /usr/bin/bckp
 wget -O /usr/bin/backup "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/ssh/backup.sh" && chmod +x /usr/bin/backup
 wget -O /usr/bin/rclone "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/rclone.conf" && chmod +x /usr/bin/rclone
-#wget -O /usr/bin/restore "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/restore.sh" && chmod +x /usr/bin/restore
+wget -O /usr/bin/versi "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/versi" && chmod +x /usr/bin/versi
 wget -O /usr/bin/cleaner "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/ssh/cleaner.sh" && chmod +x /usr/bin/cleaner
 wget -O /usr/bin/certv2ray "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/xray/certv2ray.sh" && chmod +x /usr/bin/certv2ray
 wget -O /usr/bin/add-host "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/ssh/add-host.sh" && chmod +x /usr/bin/add-host
@@ -197,6 +198,7 @@ chmod +x certv2ray
 chmod +x add-host
 chmod +x uuid
 chmod +x rclone
+chmod +x versi
 
 clear
 
