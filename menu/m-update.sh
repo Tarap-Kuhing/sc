@@ -159,6 +159,7 @@ wget -O /usr/bin/m-ssws "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/
 wget -O /usr/bin/running "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/menu/running.sh" && chmod +x /usr/bin/running
 wget -O /usr/bin/m-backup "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/menu/m-backup.sh" && chmod +x /usr/bin/m-backup
 wget -O /usr/bin/m-theme "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/menu/m-theme.sh" && chmod +x /usr/bin/m-theme
+wget -O /usr/bin/m-ip "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/menu/m-ip.sh" && chmod +x /usr/bin/m-ip
 wget -O /usr/bin/m-domain "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/menu/m-domain.sh" && chmod +x /usr/bin/m-domain
 wget -O /usr/bin/m-bot "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/menu/m-bot.sh" && chmod +x /usr/bin/m-bot
 wget -O /usr/bin/m-update "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/menu/m-update.sh" && chmod +x /usr/bin/update
@@ -184,6 +185,7 @@ chmod +x m-update
 chmod +x m-backup
 chmod +x m-theme
 chmod +x m-domain
+chmod +x m-ip
 chmod +x m-bot
 chmod +x update
 chmod +x autobackup
