@@ -290,7 +290,7 @@ datediff() {
     d2=$(date -d "$2" +%s)
     echo -e "$COLOR1 $NC Expiry In   : $(( (d1 - d2) / 86400 )) Days"
 }
-mai="datediff "$Exp" "$DATE""
+mai="datediff "$Exp1" "$DATE""
 
 today=`date -d "0 days" +"%Y-%m-%d"`
 
