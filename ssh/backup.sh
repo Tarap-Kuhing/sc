@@ -25,24 +25,60 @@ RED='\033[0;31m'
 NC='\033[0m'
 
 function BACKUPVPS() {
-mkdir -p /var/www/html >/dev/null 2>&1
-cp -r /etc/xray/config.json  config.json >/dev/null 2>&1
-zip config.json vps-backup.zip >/dev/null 2>&1
-mv *.zip /var/www/html >/dev/null 2>&1
-systemctl restart backup >/dev/null 2>&1
+IP=$(wget -qO- ipinfo.io/ip);
+date=$(date +"%Y-%m-%d")
 clear
-echo -e "\033[1;93m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/Tarap-Kuhing/user.log
-echo -e "SUCCESSFULL BACKUP YOUR VPS" | tee -a /etc/Tarap-Kuhing/user.log
-echo -e "Please Save The Following Data" | tee -a /etc/Tarap-Kuhing/user.log
-echo -e "\033[1;93m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/Tarap-Kuhing/user.log
-echo -e "${BLUE}Your VPS IP${NC} : ${GREEN}$IP${NC}" | tee -a /etc/Tarap-Kuhing/user.log
-echo -e "${BLUE}DOMAIN${NC}      : ${GREEN}$HOST${NC}" | tee -a /etc/Tarap-Kuhing/user.log
-echo -e "${BLUE}DATE${NC}        : ${GREEN}$DATEVPS${NC}" | tee -a /etc/Tarap-Kuhing/user.log
-echo -e "${BLUE}ISP${NC}         : ${GREEN}$ISPVPS${NC}" | tee -a /etc/Tarap-Kuhing/user.log
-echo -e "${BLUE}LOCATION${NC}    : ${GREEN}$CITY${NC}" | tee -a /etc/Tarap-Kuhing/user.log
-echo -e "${BLUE}LINK BACKUP${NC} : ${GREEN}$LINKBACKUP${NC}" | tee -a /etc/Tarap-Kuhing/user.log
-echo -e "\033[1;93m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/Tarap-Kuhing/user.log
-echo -e "${RED}Please Save your backup file${NC}" | tee -a /etc/Tarap-Kuhing/user.log
+email=$(cat /home/email)
+if [[ "$email" = "" ]]; then
+echo "Masukkan Email Untuk Menerima Backup"
+read -rp "Email : " -e email
+cat <<EOF>>/home/email
+$email
+EOF
+fi
+clear
+figlet "Backup"
+echo "Mohon Menunggu , Proses Backup sedang berlangsung !!"
+rm -rf /root/backup
+mkdir /root/backup
+cp /etc/passwd backup/
+cp /etc/group backup/
+cp /etc/shadow backup/
+cp /etc/gshadow backup/
+cp -r /etc/xray backup/xray
+cp -r /root/nsdomain backup/nsdomain
+cp -r /etc/slowdns backup/slowdns
+cp -r /home/vps/public_html backup/public_html
+cd /root
+zip -r $IP-$date.zip backup > /dev/null 2>&1
+rclone copy /root/$IP-$date.zip dr:backup/
+url=$(rclone link dr:backup/$IP-$date.zip)
+id=(`echo $url | grep '^https' | cut -d'=' -f2`)
+link="https://drive.google.com/u/4/uc?id=${id}&export=download"
+echo -e "
+Detail Backup 
+==================================
+IP VPS        : $IP
+Link Backup   : $link
+Tanggal       : $date
+==================================
+" | mail -s "Backup Data" $email
+rm -rf /root/backup
+rm -r /root/$IP-$date.zip
+clear
+clear
+echo -e "\033[1;93m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "SUCCESSFULL BACKUP YOUR VPS"
+echo -e "Please Save The Following Data"
+echo -e "\033[1;93m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "${BLUE}Your VPS IP${NC} : ${GREEN}$IP${NC}"
+echo -e "${BLUE}DOMAIN${NC}      : ${GREEN}$HOST${NC}"
+echo -e "${BLUE}DATE${NC}        : ${GREEN}$date${NC}"
+echo -e "${BLUE}ISP${NC}         : ${GREEN}$ISPVPS${NC}"
+echo -e "${BLUE}LOCATION${NC}    : ${GREEN}$CITY${NC}"
+echo -e "${BLUE}LINK BACKUP${NC} : ${GREEN}$$link${NC}"
+echo -e "\033[1;93m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "${RED}Please Save your backup file${NC}"
 
 }
 
