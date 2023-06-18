@@ -311,7 +311,7 @@ m-ip
 function renewipvps(){
  clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}• REGISTER IPVPS •              ${NC} $COLOR1 $NC"
+echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}• RENEW EXP IPVPS •             ${NC} $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 rm -rf /root/ip
@@ -328,7 +328,7 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/root/ip/vps")
 if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
   clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}• RENEW IPVPS •                 ${NC} $COLOR1 $NC"
+echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}• RENEW EXP IPVPS •             ${NC} $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1 ${NC}   [INFO] You have no existing clients!"
@@ -342,7 +342,7 @@ m-ip
 fi
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}• RENEW IPVPS •                 ${NC} $COLOR1 $NC"
+echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}• RENEW EXP IPVPS •             ${NC} $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 grep -E "^### " "/root/ip/vps" | cut -d ' ' -f 2-4 | nl -s '. '
@@ -361,7 +361,7 @@ if [ -z $CLIENT_NUMBER ]; then
 cd
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}• RENEW IPVPS •                 ${NC} $COLOR1 $NC"
+echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}• RENEW EXP IPVPS •             ${NC} $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1 ${NC}   [INFO] Please Input Correct Number"
@@ -380,7 +380,7 @@ if [ -z $masaaktif ]; then
 cd
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}• RENEW IPVPS •                 ${NC} $COLOR1 $NC"
+echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}• RENEW EXP IPVPS •             ${NC} $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1 ${NC}  [INFO] Please Input Correct Number"
@@ -410,7 +410,7 @@ git remote add origin https://github.com/${USERGIT}/ip.git
 git push -f https://${APIGIT}@github.com/${USERGIT}/ip.git
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}• RENEW IPVPS •                 ${NC} $COLOR1 $NC"
+echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}• RENEW EXP IPVPS •             ${NC} $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1 ${NC}  Client IP VPS Renew Successfully"
@@ -460,7 +460,7 @@ m-ip
 function renewip(){
  clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}• RENEW EXP IPVPS •              ${NC} $COLOR1 $NC"
+echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}• RENEW IPVPS •              ${NC} $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 rm -rf /root/ip
@@ -477,7 +477,7 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/root/ip/vps")
 if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
   clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}• RENEW EXP IPVPS •              ${NC} $COLOR1 $NC"
+echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}• RENEW IPVPS •                 ${NC} $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1 ${NC}   [INFO] You have no existing clients!"
@@ -491,7 +491,7 @@ m-ip
 fi
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}• RENEW EXP IPVPS •              ${NC} $COLOR1 $NC"
+echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}• RENEW IPVPS •                 ${NC} $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 grep -E "^### " "/root/ip/vps" | cut -d ' ' -f 2-4 | nl -s '. '
@@ -510,7 +510,7 @@ if [ -z $CLIENT_NUMBER ]; then
 cd
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}• RENEW EXP IPVPS •              ${NC} $COLOR1 $NC"
+echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}• RENEW IPVPS •                 ${NC} $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1 ${NC}   [INFO] Please Input Correct Number"
@@ -533,7 +533,7 @@ if [[ $RENEW = $ivps1 ]]; then
 cd
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}• RENEW EXP IPVPS •              ${NC} $COLOR1 $NC"
+echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}• RENEW IPVPS •                 ${NC} $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1 ${NC}  [INFO] Please Input Correct Number"
@@ -563,7 +563,7 @@ git remote add origin https://github.com/${USERGIT}/ip.git
 git push -f https://${APIGIT}@github.com/${USERGIT}/ip.git
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}• RENEW EXP IPVPS •              ${NC} $COLOR1 $NC"
+echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}• RENEW IPVPS •                 ${NC} $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1 ${NC}  Client IP VPS Renew Successfully"
@@ -666,9 +666,10 @@ else
 ISON=""
 ressee="m-ip"
 fi
-echo -e "   $COLOR1 [01]$NC • $APIOK        $COLOR1 [04]$NC • RENEW IPVPS"
-echo -e "   $COLOR1 [02]$NC • ADD IPVPS      $COLOR1 [05]$NC • LIST IPVPS"
-echo -e "   $COLOR1 [03]$NC • DELETE IPVPS   $COLOR1 [06]$NC • $ISON"
+echo -e "   $COLOR1 [01]$NC • $APIOK        $COLOR1 [05]$NC • USERLIST IPVPS"
+echo -e "   $COLOR1 [02]$NC • ADD IPVPS      $COLOR1 [06]$NC • $ISON"
+echo -e "   $COLOR1 [03]$NC • DELETE IPVPS   $COLOR1 [07]$NC • RENEW IPVPS"
+echo -e "   $COLOR1 [04]$NC • RENEW EXP IPVPS"
 echo -e "   "
 echo -e "   $COLOR1 [00]$NC • GO BACK"
 
