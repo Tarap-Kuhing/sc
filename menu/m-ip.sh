@@ -8,11 +8,11 @@ COLBG1="$(cat /etc/kuhing/theme/$colornow | grep -w "BG" | cut -d: -f2|sed 's/ /
 WH='\033[1;37m'
 
 APIGIT=$(cat /etc/github/api)
-EMAILGIT=$(cat /etc/github/email)
+EMAILGIT=$(lailafauziyah00@gmail.com)
 USERGIT=$(cat /etc/github/username)
 #regis ip
 API1=$(cat /etc/github/api)
-EMAIL1=$(cat /etc/github/email)
+EMAIL1=$(lailafauziyah00@gmail.com)
 USERNAME1=$(cat /etc/github/username)
 
 
