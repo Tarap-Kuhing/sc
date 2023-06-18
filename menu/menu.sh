@@ -130,7 +130,13 @@ if [[ $ssh_ws == "running" ]]; then
 else
     status_ws="${RED}OFF${NC}"
 fi
-
+# // SSH Dropbear
+dbr=$(service dropbear status | grep active | cut -d ' ' $stat)
+if [ "$dbr" = "active" ]; then
+resdbr="${green}ON${NC}"
+else
+resdbr="${red}OFF${NC}"
+fi
 # // nginx
 nginx=$( systemctl status nginx | grep Active | awk '{print $3}' | sed 's/(//g' | sed 's/)//g' )
 if [[ $nginx == "running" ]]; then
@@ -138,7 +144,12 @@ if [[ $nginx == "running" ]]; then
 else
     status_nginx="${RED}OFF${NC}"
 fi
-
+sshstunel=$(service stunnel4 status | grep active | cut -d ' ' $stat)
+if [ "$sshstunel" = "active" ]; then
+resst="${green}ON${NC}"
+else
+resst="${red}OFF${NC}"
+fi
 # // SSH Websocket Proxy
 xray=$( systemctl status xray | grep Active | awk '{print $3}' | sed 's/(//g' | sed 's/)//g' )
 if [[ $xray == "running" ]]; then
@@ -219,7 +230,7 @@ echo -e "$COLOR1 $NC ${WH}System Uptime     ${COLOR1}: ${WH}$uphours $upminutes"
 fi
 echo -e "$COLOR1 $NC ${WH}Memory Usage      ${COLOR1}: ${WH}$uram / $tram"
 echo -e "$COLOR1 $NC ${WH}Date              ${COLOR1}: ${WH}$DATEVPS $TIMEZONE${NC}"
-echo -e "$COLOR1 $NC ${WH}ISP & City       ${COLOR1}: ${WH}$ISP & $CITY"
+echo -e "$COLOR1 $NC ${WH}ISP & City       ${COLOR1} : ${WH}$ISP & $CITY"
 echo -e "$COLOR1 $NC ${WH}Current Domain    ${COLOR1}: ${WH}$(cat /etc/xray/domain)"
 #echo -e "$COLOR1 $NC ${WH}Nameserver Slowdns${COLOR1}: ${WH}$(cat /root/nsdomain)"
 echo -e "$COLOR1 $NC ${WH}IP-VPS            ${COLOR1}: ${WH}$IPVPS${NC}"
@@ -230,6 +241,7 @@ echo -e "   $COLOR1 ${WH}$total_ssh       $vmess        $vless        $trtls    
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1 $NC ${WH}[ SSH WS : ${status_ws} ${WH}]  ${WH}[ XRAY : ${status_xray} ${WH}]   ${WH}[ NGINX : ${status_nginx} ${WH}] $COLOR1 $NC"
+echo -e "$COLOR1 $NC ${WH}[ DROPBEAR : ${dbr} ${WH}]      ${WH}[ STUNNEL : ${sshstunel}${WH}]   $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1 ${COLOR1}Traffic${NC}      ${COLOR1}Today       Yesterday       Month   ${NC}"
