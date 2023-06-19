@@ -1,9 +1,9 @@
 #!/bin/bash
 ns_domain_cloudflare() {
-	DOMAIN=tarong.my.id
+	DOMAIN=hendra93.my.id
 	DOMAIN_PATH=$(cat /etc/xray/domain)
 	SUB=$(tr </dev/urandom -dc a-z0-9 | head -c7)
-	SUB_DOMAIN=${SUB}.tarong.my.id
+	SUB_DOMAIN=${SUB}.hendra93.my.id
 	NS_DOMAIN=ns.${SUB_DOMAIN}
 	CF_ID=merahjambo@gmail.com
         CF_KEY=86431de017f7bf317c3960061da2f87c8effb
