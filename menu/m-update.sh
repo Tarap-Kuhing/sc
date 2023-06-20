@@ -150,7 +150,7 @@ fun_bar() {
 }
 res1() {
 #wget -O m-ip "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/menu/m-ip.sh"    
-wget -O /usr/bin/menu "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/menu/menu.sh" && chmod +x /usr/bin/menu
+wget -O /usr/bin/menu "https://raw.githubusercontent.com/Tarap-Kuhing/v/main/menu/menu.sh" && chmod +x /usr/bin/menu
 wget -O /usr/bin/m-vmess "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/menu/m-vmess.sh" && chmod +x /usr/bin/m-vmess
 wget -O /usr/bin/m-vless "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/menu/m-vless.sh" && chmod +x /usr/bin/m-vless
 wget -O /usr/bin/m-trojan "https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/menu/m-trojan.sh" && chmod +x /usr/bin/m-trojan
